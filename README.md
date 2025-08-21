@@ -1,7 +1,7 @@
 
-# Pocket Center FrontEnd
+# [Nombre_Página] FrontEnd
 
-En este repositorio se encuentra la descripción del proyecto "Pocket Center Webstore" para el ramo de Integración de Plataformas, este proyecto corresponde a un e-commerce con la finalidad de digitalizar la pyme "Pocket Center"
+En este repositorio se encuentra la descripción del proyecto [Nombre_Página] para el ramo de Taller de Base de datos, este proyecto corresponde a un e-commerce con la finalidad de digitalizar la pyme [Nombre_Página]
 
 ## Herramientas
 
