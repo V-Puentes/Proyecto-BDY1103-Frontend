@@ -1,7 +1,7 @@
 
-# [Nombre_Página] FrontEnd
+# Mimi´s Trinkets FrontEnd
 
-En este repositorio se encuentra la descripción del proyecto [Nombre_Página] para el ramo de Taller de Base de datos, este proyecto corresponde a un e-commerce con la finalidad de digitalizar la pyme [Nombre_Página]
+En este repositorio se encuentra la descripción del proyecto Mimi´s Trinkets para el ramo de Taller de Base de datos, este proyecto corresponde a un e-commerce con la finalidad de digitalizar la pyme Mimi´s Trinkets
 
 ## Herramientas
 
@@ -99,7 +99,7 @@ Los siguientes arhivos se encuentran directamente en la carpeta raiz
 - index.html: crea la aplicación e importa bootstrap
 - vite.config.js: configura vite
 - README.md: este documento, donde se detalla el funcionamiento del frontend
-
+##ACTUALIZAR DE ACÁ EN ADELANTE
 
 ## Rutas
 Las rutas se encuentran definidas dentro del archivo App.jsx y son ls siguientes:
