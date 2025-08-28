@@ -55,4 +55,4 @@ const PokemonProducts = () => {
   );
 };
 
-export default FiguresProducts;
+export default PageFigures;
