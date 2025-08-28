@@ -19,11 +19,10 @@ const Navbar = () => {
 
   const totalItemsInCart = carrito.reduce((total, item) => total + item.cantidad, 0);
 
-
   return (
     <nav 
       className="navbar navbar-expand-lg navbar-dark w-100 shadow-lg" 
-      style={{ backgroundColor: '#4f46e5' }}
+      style={{ backgroundColor: 'var(--rosado-oscuro)' }}  
     >
       <div className="container-fluid">
         {/* Logo y título */}
