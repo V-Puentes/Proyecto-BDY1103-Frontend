@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { DataContext } from '../context/DataProvider.jsx';
 
-const MagicProducts = () => {
+const PageGoods = () => {
   const [products, setProducts] = useState([]);
   const { carrito, setCarrito } = useContext(DataContext);
 
