@@ -20,7 +20,7 @@ const MagicProducts = () => {
     fetch('/productos.json') // Asegúrate de cambiar la ruta si es necesario
       .then(response => response.json())
       .then(data => {
-        const filteredProducts = data.productos.filter(product => product.franquicia === 'magic');
+        const filteredProducts = data.productos.filter(product => product.franquicia === 'goods');
         setProducts(filteredProducts);
       })
       .catch(error => console.error('Error cargando los productos:', error));
