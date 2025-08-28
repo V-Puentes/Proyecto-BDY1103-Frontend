@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav 
       className="navbar navbar-expand-lg navbar-dark w-100 shadow-lg" 
-      style={{ backgroundColor: 'var(--rosado-oscuro)' }}  
+      style={{ backgroundColor: 'var(--rosa-pastel)' }}  
     >
       <div className="container-fluid">
         {/* Logo y título */}
