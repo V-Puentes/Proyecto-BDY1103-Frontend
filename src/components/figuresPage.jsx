@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { DataContext } from '../context/DataProvider.jsx';
 
-const PokemonProducts = () => {
+const PageFigures = () => {
   const [products, setProducts] = useState([]);
   const { carrito, setCarrito } = useContext(DataContext);
 
