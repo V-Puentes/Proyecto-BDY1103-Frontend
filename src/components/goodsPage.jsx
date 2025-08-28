@@ -28,7 +28,7 @@ const MagicProducts = () => {
 
   return (
     <div className="container mt-4">
-      <h2 className="text-center mb-4">Productos de Magic</h2>
+      <h2 className="text-center mb-4">Goods</h2>
       <div className="row">
         {products.map(product => (
           <div key={product.id} className="col-md-4 mb-4">
@@ -55,4 +55,4 @@ const MagicProducts = () => {
   );
 };
 
-export default MagicProducts;
+export default GoodsProducts;
