@@ -55,4 +55,4 @@ const PokemonProducts = () => {
   );
 };
 
-export default MangasProducts;
+export default PageMangas;
