@@ -1,0 +1,113 @@
+/* Personalización de colores fríos para Bootstrap */
+:root {
+  --morado-oscuro: #5f2a7f; 
+  --morado-medium: #7a4d9c; 
+  --lavanda-suave: #d1a3d8; 
+  --rosa-pastel: #f1c6e3; 
+  --fucsia-oscuro: #c159d6; 
+  --gris-morado-oscuro: #6a4c71; 
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Personalización de Bootstrap */
+.btn-primary {
+  background-color: var(--morado-oscuro);
+  border-color: var(--morado-oscuro);
+}
+
+.btn-primary:hover {
+  background-color: #0e2d6e;
+  border-color: #0e2d6e;
+}
+
+.btn-outline-primary {
+  color: var(--morado-oscuro);
+  border-color: var(--morado-oscuro);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--morado-oscuro);
+  border-color: var(--morado-oscuro);
+}
+
+.bg-primary {
+  background-color: var(--morado-oscuro) !important;
+}
+
+.text-primary {
+  color: var(--morado-oscuro) !important;
+}
+
+/* Estilos para cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner principal */
+.banner-hero {
+  background: linear-gradient(135deg, #5f2a7f 0%, #7a4d9c 100%);
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 30px;
+}
+
+/* Categorías destacadas */
+.card.bg-gradient {
+  background-size: 200% 200%;
+  transition: all 0.3s ease;
+}
+
+.card.bg-gradient:hover {
+  background-position: right center;
+}
+
+/* Estilos para la navegación de categorías */
+.btn-group .btn {
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+/* Badge personalizado */
+.badge.bg-primary {
+  background-color: var(--morado-oscuro) !important;
+  text-transform: capitalize;
+}
+
+/* Formato para los precios */
+.fw-bold {
+  color: var(--morado-oscuro);
+}
+.fw-bold-titulohome {
+  color: var(--lavanda-suave);
+}
+
+/* Personalización del footer */
+footer {
+  background-color: var(--lavanda-suave);
+  color: white;
+}
+
+/* Animación para el loader */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+}
