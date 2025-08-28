@@ -20,7 +20,7 @@ const YugiohProducts = () => {
         fetch('/productos.json') // Asegúrate de cambiar la ruta si es necesario
             .then(response => response.json())
             .then(data => {
-                const filteredProducts = data.productos.filter(product => product.franquicia === 'yugioh');
+                const filteredProducts = data.productos.filter(product => product.franquicia === 'cds');
                 setProducts(filteredProducts);
             })
             .catch(error => console.error('Error cargando los productos:', error));
@@ -28,7 +28,7 @@ const YugiohProducts = () => {
 
     return (
         <div className="container mt-4">
-            <h2 className="text-center mb-4">Productos de YuGiOh</h2>
+            <h2 className="text-center mb-4">Cds</h2>
             <div className="row">
                 {products.map(product => (
                     <div key={product.id} className="col-md-4 mb-4">
@@ -55,4 +55,4 @@ const YugiohProducts = () => {
     );
 };
 
-export default YugiohProducts;
+export default CdsProducts;
