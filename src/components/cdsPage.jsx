@@ -55,4 +55,4 @@ const YugiohProducts = () => {
     );
 };
 
-export default CdsProducts;
+export default PageCds;
