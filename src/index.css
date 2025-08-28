@@ -1,12 +1,12 @@
-/* Personalización de colores fríos para Bootstrap */
 :root {
-  --morado-oscuro: #5f2a7f; 
-  --morado-medium: #7a4d9c; 
-  --lavanda-suave: #d1a3d8; 
-  --rosa-pastel: #f1c6e3; 
-  --fucsia-oscuro: #c159d6; 
-  --gris-morado-oscuro: #6a4c71; 
+  --rosado-oscuro: #d36b87; 
+  --rosado-medium: #f0a6ca; 
+  --rosa-pastel: #f9d1e0; 
+  --rosa-claro: #f7e1e7; 
+  --negro: #000000; 
+  --gris-oscuro: #4a4a4a;
 }
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f8fafc;
@@ -14,31 +14,31 @@ body {
 
 /* Personalización de Bootstrap */
 .btn-primary {
-  background-color: var(--morado-oscuro);
-  border-color: var(--morado-oscuro);
+  background-color: var(--rosado-oscuro);
+  border-color: var(--rosado-oscuro);
 }
 
 .btn-primary:hover {
-  background-color: #0e2d6e;
-  border-color: #0e2d6e;
+  background-color: var(--negro);
+  border-color: var(--negro);
 }
 
 .btn-outline-primary {
-  color: var(--morado-oscuro);
-  border-color: var(--morado-oscuro);
+  color: var(--rosado-oscuro);
+  border-color: var(--rosado-oscuro);
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--morado-oscuro);
-  border-color: var(--morado-oscuro);
+  background-color: var(--rosado-oscuro);
+  border-color: var(--rosado-oscuro);
 }
 
 .bg-primary {
-  background-color: var(--morado-oscuro) !important;
+  background-color: var(--rosado-oscuro) !important;
 }
 
 .text-primary {
-  color: var(--morado-oscuro) !important;
+  color: var(--rosado-oscuro) !important;
 }
 
 /* Estilos para cards */
@@ -46,6 +46,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
   overflow: hidden;
+  background-color: var(--rosa-pastel);
 }
 
 .card:hover {
@@ -55,7 +56,7 @@ body {
 
 /* Banner principal */
 .banner-hero {
-  background: linear-gradient(135deg, #5f2a7f 0%, #7a4d9c 100%);
+  background: linear-gradient(135deg, var(--rosado-oscuro) 0%, var(--rosado-medium) 100%);
   border-radius: 0 0 20px 20px;
   margin-bottom: 30px;
 }
@@ -78,22 +79,23 @@ body {
 
 /* Badge personalizado */
 .badge.bg-primary {
-  background-color: var(--morado-oscuro) !important;
+  background-color: var(--rosado-oscuro) !important;
   text-transform: capitalize;
 }
 
 /* Formato para los precios */
 .fw-bold {
-  color: var(--morado-oscuro);
+  color: var(--rosado-oscuro);
 }
+
 .fw-bold-titulohome {
-  color: var(--lavanda-suave);
+  color: var(--rosa-pastel);
 }
 
 /* Personalización del footer */
 footer {
-  background-color: var(--lavanda-suave);
-  color: white;
+  background-color: var(--rosa-claro);
+  color: var(--negro);
 }
 
 /* Animación para el loader */
