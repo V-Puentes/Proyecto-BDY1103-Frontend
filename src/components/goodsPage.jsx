@@ -55,4 +55,4 @@ const MagicProducts = () => {
   );
 };
 
-export default GoodsProducts;
+export default PageGoods;
