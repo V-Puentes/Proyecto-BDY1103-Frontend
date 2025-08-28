@@ -20,7 +20,7 @@ const PokemonProducts = () => {
     fetch('/productos.json') // Asegúrate de cambiar la ruta si es necesario
       .then(response => response.json())
       .then(data => {
-        const filteredProducts = data.productos.filter(product => product.franquicia === 'pokemon');
+        const filteredProducts = data.productos.filter(product => product.franquicia === 'mangas');
         setProducts(filteredProducts);
       })
       .catch(error => console.error('Error cargando los productos:', error));
@@ -28,7 +28,7 @@ const PokemonProducts = () => {
 
   return (
     <div className="container mt-4">
-      <h2 className="text-center mb-4">Productos de Pokémon</h2>
+      <h2 className="text-center mb-4">Mangas</h2>
      <div className="row">
         {products.map(product => (
           <div key={product.id} className="col-md-4 mb-4">
@@ -55,4 +55,4 @@ const PokemonProducts = () => {
   );
 };
 
-export default PokemonProducts;
+export default MangasProducts;
