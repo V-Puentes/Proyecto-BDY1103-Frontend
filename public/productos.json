@@ -2,426 +2,442 @@
     "productos": [
         {
             "id": 1,
-            "nombre": "Sobre de Cartas Pokémon - Scarlet & Violet",
-            "descripcion": "Un sobre de cartas de la última expansión de Pokémon TCG.",
-            "precio": 5990,
-            "foto": "./assets/jpg/1-Sobre de Cartas Pokémon Scarlet y Violet.jpg",
+            "nombre": "(Figura Bishojo) Hatsune Miku - Hatsune Miku 15° Aniversario",
+            "descripcion": "figura a escala del 15th aniversario de Hatsune Miku Fresa",
+            "precio": 318000,
+            "foto": "./assets/png/1.png",
             "oferta": true,
-            "franquicia": "pokemon"
+            "franquicia": "figures"
         },
         {
             "id": 2,
-            "nombre": "Deck de Inicio Yu-Gi-Oh! - Dark Magicians",
-            "descripcion": "Un mazo de inicio basado en el legendario Mago Oscuro.",
-            "precio": 45990,
-            "foto": "./assets/png/2-Mazo Dark Magicians.png",
-            "franquicia": "yugioh"
+            "nombre": "(Figura Bishojo) Hatsune Miku MAGICAL MIRAI 2025 ver.",
+            "descripcion": "Hatsune Miku – Magical Mirai 2025 Ver. – Figura a escala.",
+            "precio": 218200,
+            "foto": "./assets/png/2.png",
+            "franquicia": "figures"
         },
         {
             "id": 3,
-            "nombre": "Booster Pack Magic: The Gathering - March of the Machine",
-            "descripcion": "Sobre de cartas de la última edición de Magic: The Gathering.",
-            "precio": 26990,
-            "foto": "./assets/jpg/3-Booster pack march of the machine.jpg",
+            "nombre": "(Figura Bishojo) Shenhe Genshin Impact",
+            "descripcion": "Shenhe – Lonesome Transcendence Ver. (Genshin Impact) – Figura a escala",
+            "precio": 260990,
+            "foto": "./assets/png/3.png",
             "oferta": true,
-            "franquicia": "magic"
+            "franquicia": "figures"
         },
         {
             "id": 4,
-            "nombre": "Fundas para Cartas - Ultra Pro Gardevoir",
-            "descripcion": "Pack de 65 fundas protectoras para cartas de tamaño estándar.",
-            "precio": 6990,
-            "foto": "./assets/png/4-fundas para cartas gardevoir.png",
-            "franquicia": "pokemon"
+            "nombre": "(Figura Bishojo) Vocal series 01: Hatsune Miku: World Is Mine 2024 Ver.",
+            "descripcion": "Hatsune Miku – World Is Mine 2024 Ver. (Vocal Series 01, Bishojo)",
+            "precio": 204200,
+            "foto": "./assets/png/4.png",
+            "franquicia": "figures"
         },
         {
             "id": 5,
-            "nombre": "Caja de Almacenamiento Pokémon",
-            "descripcion": "Caja de almacenamiento con arte de Pokémon para proteger tus cartas.",
-            "precio": 9990,
-            "foto": "./assets/png/5-caja almacenamiento pokemon.png",
+            "nombre": "(Figura Bishojo)Frieren: Beyond Journey's End Fern: Reflections of a Distant Memory.",
+            "descripcion": "Frieren: Beyond Journey's End mage Fern – Figura a escala.",
+            "precio": 80990,
+            "foto": "./assets/png/5.png",
             "oferta": true,
-            "franquicia": "pokemon"
+            "franquicia": "figures"
         },
         {
             "id": 6,
-            "nombre": "Tapete de Juego Yu-Gi-Oh! - Kaiba",
-            "descripcion": "Tapete oficial de Yu-Gi-Oh! con diseño de Seto Kaiba y Yugi.",
-            "precio": 12990,
-            "foto": "./assets/png/6-tapete juego kaiba.png",
-            "franquicia": "yugioh"
+            "nombre": "(Figma) Joker",
+            "descripcion": "Figura Figma de Joker de Persona 5 con detalles icónicos del personaje.",
+            "precio":  88900,
+            "foto": "./assets/png/6.png",
+            "franquicia": "figures"
         },
         {
             "id": 7,
-            "nombre": "Booster Box Pokémon - Brilliant Stars",
-            "descripcion": "Caja con 36 sobres de la expansión Brilliant Stars de Pokémon TCG.",
-            "precio": 150990,
-            "foto": "./assets/png/7-Booster box brilliant stars.png",
+            "nombre": "(Figma) Styles Black Corset Dress",
+            "descripcion": "Elegante vestido corset negro para personalizar tus figuras Figma.",
+            "precio": 32000,
+            "foto": "./assets/png/7.png",
             "oferta": true,
-            "franquicia": "pokemon"
+            "franquicia": "figures"
         },
         {
             "id": 8,
-            "nombre": "Estructura de Mazo Yu-Gi-Oh! - Cyber Strike",
-            "descripcion": "Mazo estructurado de Yu-Gi-Oh! con temática de Cyber Dragón.",
-            "precio": 12990,
-            "foto": "./assets/png/8- mazo yugi cyber strike.png",
-            "franquicia": "yugioh"
+            "nombre": "(Figma) OMGKawaiiAngel",
+            "descripcion": "Figura Figma de OMGkawaiiAngel de Needy Girl Overdose",
+            "precio": 49990,
+            "foto": "./assets/png/8.png",
+            "franquicia": "figures"
         },
         {
             "id": 9,
-            "nombre": "Commander Deck Magic: The Gathering - Eldrazi Unbound",
-            "descripcion": "Mazo de Commander con cartas temáticas de Eldrazi.",
+            "nombre": "(Figma) Himmel",
+            "descripcion": "Figura Figma del legendario héroe de 'Sousou no Frieren'.",
             "precio": 119990,
-            "foto": "./assets/png/9- mazo Eldrazi unbound.png",
+            "foto": "./assets/png/9.png",
             "oferta": true,
-            "franquicia": "magic"
+            "franquicia": "figures"
         },
         {
             "id": 10,
-            "nombre": "Dado Contador de Vida D20 - Magic: The Gathering",
-            "descripcion": "Dado de 20 caras para llevar el conteo de vida en Magic.",
-            "precio": 2390,
-            "foto": "./assets/png/10- dado d20 magic.png",
-            "franquicia": "magic"
+            "nombre": "(Figma) A2",
+            "descripcion": "Figura Figma de la androide rebelde de 'NieR:Automata'",
+            "precio": 82900,
+            "foto": "./assets/png/10.png",
+            "franquicia": "figures"
         },
         {
             "id": 11,
-            "nombre": "Álbum Coleccionador Pokémon - Pikachu",
-            "descripcion": "Álbum de colección con diseño de Pikachu para almacenar cartas.",
-            "precio": 5990,
-            "foto": "./assets/png/11-album pikachu.png",
+            "nombre": "(Nendoroid)Kanata Shinkai",
+            "descripcion": "Figura Nendoroid del idol Kanata Shinkai de 'Ensemble Stars!!",
+            "precio": 36990,
+            "foto": "./assets/png/11.png",
             "oferta": true,
-            "franquicia": "pokemon"
+            "franquicia": "figures"
         },
         {
             "id": 12,
-            "nombre": "Lata de Cartas Yu-Gi-Oh! - 2023 Tin of the Pharaoh's Gods",
-            "descripcion": "Lata coleccionable con sobres y cartas exclusivas.",
-            "precio": 25990,
-            "foto": "./assets/png/12- lata cartas faraon.png",
-            "franquicia": "yugioh"
+            "nombre": "(Nendoroid) Twilight Sparkle",
+            "descripcion": "Figura Nendoroid de Twilight Sparkle de 'My Little Pony'",
+            "precio": 41600,
+            "foto": "./assets/png/12.png",
+            "franquicia": "figures"
         },
         {
             "id": 13,
-            "nombre": "Pack de Energías Pokémon",
-            "descripcion": "Pack con 45 cartas de energía de Pokémon TCG.",
-            "precio": 4390,
-            "foto": "./assets/png/13-pack energias.png",
-            "franquicia": "pokemon"
+            "nombre": "(Nendoroid) Kenma Kozume: Second Uniform Ver",
+            "descripcion": "Nendoroid de Kenma con su uniforme alterno de 'Haikyuu!!'.",
+            "precio": 37990,
+            "foto": "./assets/png/13.png",
+            "franquicia": "figures"
         },
         {
             "id": 14,
-            "nombre": "Playmat Magic: The Gathering - Liliana Vess",
-            "descripcion": "Tapete de juego con arte de Liliana Vess para Magic: The Gathering.",
-            "precio": 15990,
-            "foto": "./assets/jpg/14-mat magic liliana vess.jpg",
+            "nombre": "(Nendoroid) Nana Osaki",
+            "descripcion": "Figura Nendoroid de la icónica rockera de 'NANA'.",
+            "precio": 41990,
+            "foto": "./assets/png/14.png",
             "oferta": true,
-            "franquicia": "magic"
+            "franquicia": "figures"
         },
         {
             "id": 15,
-            "nombre": "Cartas Coleccionables de Promoción Yu-Gi-Oh!",
-            "descripcion": "Set especial de cartas promocionales de Yu-Gi-Oh!.",
-            "precio": 19990,
-            "foto": "./assets/png/15- pack promocional yugi.png",
-            "franquicia": "yugioh"
+            "nombre": "(Nendoroid) Maquillaje facial personalizable!: Rena 02 (Peach/Cinnamon/Cream/Almond Milk)",
+            "descripcion": "Rostros artísticos intercambiables para Nendoroid Doll.",
+            "precio": 8990,
+            "foto": "./assets/png/15.png",
+            "franquicia": "figures"
         },
         {
             "id": 16,
-            "nombre": "Pokemon TCG Box Paldea Evolved Elite Trainer Box Scarlet & Violet",
-            "descripcion": "Caja con 8 sobres, fundas y accesorios de la expansión Paldea Evolved.",
-            "precio": 39990,
-            "foto": "./assets/png/16- box paldean evolutions.png",
+            "nombre": "(Manga Sets) Skip and Loafer Vol. 1–12",
+            "descripcion": "set de manga colección Completa [12 Libros] Español",
+            "precio": 68990,
+            "foto": "./assets/png/16.png",
             "oferta": true,
-            "franquicia": "pokemon"
+            "franquicia": "mangas"
         },
         {
             "id": 17,
-            "nombre": "Booster Box Yu-Gi-Oh! - Maze of Memories",
+            "nombre": "Go For It, Nakamura! (Ganbare! Nakamura-kun!!) Vol.1-2",
             "descripcion": "Caja con 24 sobres de la expansión Maze of Memories.",
-            "precio": 99990,
-            "foto": "./assets/png/17-box yugi maze of memories.png",
-            "franquicia": "yugioh"
+            "precio": 12990,
+            "foto": "./assets/png/17.png",
+            "franquicia": "mangas"
         },
         {
             "id": 18,
-            "nombre": "Deck de Commander Magic - Planeswalker Teferi",
-            "descripcion": "Mazo preconstruido de Commander centrado en Teferi.",
+            "nombre": "Cardcaptor Sakura: Clear Card Vol. 1–16",
+            "descripcion": "Cardcaptor Sakura: Clear Card - Colección completa en formato tankoubon con sobrecubierta",
             "precio": 17990,
-            "foto": "./assets/png/18-deck magic commander teferi.png",
+            "foto": "./assets/png/18.png",
             "oferta": true,
-            "franquicia": "magic"
+            "franquicia": "mangas"
         },
         {
             "id": 19,
-            "nombre": "Set de Dados Yu-Gi-Oh!",
-            "descripcion": "Set de dados con símbolos icónicos de Yu-Gi-Oh!.",
+            "nombre": "Let's! Haikyu!? Vol. 1–11",
+            "descripcion": "Set de 11 libros del manga alternativo de Haikyu!!.",
             "precio": 7990,
-            "foto": "./assets/png/19-dados yugi.png",
-            "franquicia": "yugioh"
+            "foto": "./assets/png/19.png",
+            "franquicia": "mangas"
         },
         {
             "id": 20,
-            "nombre": "Tapete de Juego Pokémon - Charizard Gigamax",
-            "descripcion": "Tapete oficial con diseño de Charizard Gigamax.",
+            "nombre": "The Guy She Was Interested in Wasn't a Guy at All Vol. 1–3",
+            "descripcion": "Set 3 libros - Trilogía manga romántica GirlsLove",
             "precio": 17590,
-            "foto": "./assets/png/20-tapete charizard gigamax.png",
+            "foto": "./assets/png/20.png",
             "oferta": true,
-            "franquicia": "pokemon"
+            "franquicia": "mangas"
         },
         {
             "id": 21,
-            "nombre": "Fundas para Cartas - Dragon Shield Matte Black",
-            "descripcion": "Pack de 100 fundas premium para cartas.",
-            "precio": 14590,
-            "foto": "./assets/jpg/21-dragon-shield-sleeves-standard-size-matte-100.jpg",
-            "franquicia": "magic"
+            "nombre": "Blue Lock vol. 01",
+            "descripcion": "Blue Lock - Manga en formato tankoubon con sobrecubierta y páginas a color exclusivas",
+            "precio": 12490,
+            "foto": "./assets/png/21.png",
+            "franquicia": "mangas"
         },
         {
             "id": 22,
-            "nombre": "Booster Pack Pokémon - Fusion Strike",
-            "descripcion": "Sobre de cartas de la expansión Fusion Strike de Pokémon TCG.",
-            "precio": 9990,
-            "foto": "./assets/jpg/22-booster pack fusion strike.jpg",
+            "nombre": "Naruto vol. 66",
+            "descripcion": "Naruto Vol. 66 - La batalla en la dimensión del Kamui.",
+            "precio": 16990,
+            "foto": "./assets/png/22.png",
             "oferta": true,
-            "franquicia": "pokemon"
+            "franquicia": "mangas"
         },
         {
             "id": 23,
-            "nombre": "Estructura de Mazo Yu-Gi-Oh! - Spirit Charmers",
-            "descripcion": "Mazo estructurado de Yu-Gi-Oh! con temática de invocadores de espíritus.",
+            "nombre": "¡Huyamos juntas! vol. 01",
+            "descripcion": "Huyamos juntas! Vol. 1. - Romance y reencuentro entre dos mujeres marcado por recuerdos de juventud y un amor imposible de olvidar.",
             "precio": 10990,
-            "foto": "./assets/png/23-mazo spirit charmers.png",
-            "franquicia": "yugioh"
+            "foto": "./assets/png/23.png",
+            "franquicia": "mangas"
         },
         {
             "id": 24,
-            "nombre": "Set de Cartas Promocionales Magic: The Gathering - Zendikar Rising",
-            "descripcion": "Set de cartas promocionales de la expansión Zendikar Rising.",
-            "precio": 8990,
-            "foto": "./assets/jpg/24-pack magic zendikar rising.jpg",
-            "franquicia": "magic"
+            "nombre": "El callejón",
+            "descripcion": "El Callejón - Antología de 11 relatos cortos de Junji Ito que mezclan terror y misterio",
+            "precio": 20990,
+            "foto": "./assets/png/24.png",
+            "franquicia": "mangas"
         },
         {
             "id": 25,
-            "nombre": "Caja de Almacenamiento Yu-Gi-Oh! - Legendary Decks",
-            "descripcion": "Caja de almacenamiento con diseño de mazos legendarios de Yu-Gi-Oh!.",
-            "precio": 13990,
-            "foto": "./assets/jpg/25-caja yugi.jpg",
+            "nombre": "One punch man vol. 24",
+            "descripcion": "One Punch Man Vol. 24 - Saitama se enfrenta al rey Orochi.",
+            "precio": 16990,
+            "foto": "./assets/png/25.png",
             "oferta": true,
-            "franquicia": "yugioh"
+            "franquicia": "mangas"
         },
         {
             "id": 26,
-            "nombre": "Booster Box Magic: The Gathering - Strixhaven",
-            "descripcion": "Caja con 36 sobres de la expansión Strixhaven de Magic: The Gathering.",
-            "precio": 103990,
-            "foto": "./assets/jpg/26-pack magic strixhaven.jpg",
-            "franquicia": "magic"
+            "nombre": "(KeyChain)Obey Me! - Set de Llaveros Acrílicos Belphegor",
+            "descripcion": "Set de 2 llaveros acrílicos de Belphegor de Obey Me!, edición especial de la Shibuya109 Pop Up Store.",
+            "precio": 8200,
+            "foto": "./assets/png/26.png",
+            "franquicia": "goods"
         },
         {
             "id": 27,
-            "nombre": "Tapete de Juego Pokémon - Eevee Evolutions",
-            "descripcion": "Tapete oficial con diseño de las evoluciones de Eevee.",
-            "precio": 15990,
-            "foto": "./assets/jpg/27-tapete pokemon eveelutions.jpg",
+            "nombre": "(pines)Obey Me! Nightbringer - Caja con 7 Chapas Coleccionables (Arte Oficial)",
+            "descripcion": "Caja (1BOX=7) de chapas metálicas de la serie Obey Me! Nightbringer, con ilustraciones oficiales exclusivas.",
+            "precio": 28500,
+            "foto": "./assets/png/27.png",
             "oferta": true,
-            "franquicia": "pokemon"
+            "franquicia": "goods"
         },
         {
             "id": 28,
-            "nombre": "Deck de Inicio Yu-Gi-Oh! - Shaddoll Showdown",
-            "descripcion": "Mazo de inicio basado en el arquetipo Shaddoll.",
-            "precio": 7990,
-            "foto": "./assets/jpg/28-deck yugi shaddoll showdown.jpg",
-            "franquicia": "yugioh"
+            "nombre": "(pines)Hatsune Miku - In your memory.",
+            "descripcion": "Set de chapas metálicas de Hatsune Miku 'in your memory'.",
+            "precio": 6500,
+            "foto": "./assets/png/28.png",
+            "franquicia": "goods"
         },
         {
             "id": 29,
-            "nombre": "Booster Pack Magic: The Gathering - Kaldheim",
-            "descripcion": "Sobre de cartas de la expansión Kaldheim de Magic: The Gathering.",
-            "precio": 4990,
-            "foto": "./assets/jpg/29- pack magic kaldheim.jpg",
+            "nombre": "(pines)Funda Decorativa para Pines 57mm - Hydrangea",
+            "descripcion": "Cubierta protectora y decorativa para pines de 57mm con diseño de hortensias.",
+            "precio": 1700,
+            "foto": "./assets/png/29.png",
             "oferta": true,
-            "franquicia": "magic"
+            "franquicia": "goods"
         },
         {
             "id": 30,
-            "nombre": "Álbum Coleccionador Yu-Gi-Oh! - Blue-Eyes White Dragon",
-            "descripcion": "Álbum de colección con diseño de Blue-Eyes White Dragon.",
-            "precio": 14390,
-            "foto": "./assets/jpg/30-album yugi blue eye white dragon.jpg",
-            "franquicia": "yugioh"
+            "nombre": "(pines) Funda Protectora para Pines 100mm – Universal)",
+            "descripcion": "Cubierta transparente compatible con pines de 100mm.",
+            "precio": 1700,
+            "foto": "./assets/png/30.png",
+            "franquicia": "goods"
         },
         {
             "id": 31,
-            "nombre": "Caja de Entrenador Élite Pokémon - Sword & Shield",
-            "descripcion": "Caja con 8 sobres, fundas y accesorios de la expansión Sword & Shield.",
+            "nombre": "(doll) Naruto Shippuden – Doll Kakashi Hatake",
+            "descripcion": "Mini figura colgante de Kakashi Hatake con cadena eslabonada.",
             "precio": 49990,
-            "foto": "./assets/jpg/31- box pokemon elite.jpg",
+            "foto": "./assets/png/31.png",
             "oferta": true,
-            "franquicia": "pokemon"
+            "franquicia": "goods"
         },
         {
             "id": 32,
-            "nombre": "Booster Box Yu-Gi-Oh! - Ghosts From the Past",
-            "descripcion": "Caja con 5 sobres de la expansión Ghosts From the Past.",
-            "precio": 14990,
-            "foto": "./assets/jpg/32- box yugi ghots from the past.jpg",
-            "franquicia": "yugioh"
+            "nombre": "(keychain) The Fragrant Flower Blooms with Dignity – Llavero Acrílico Kaoruko Waguri",
+            "descripcion": "Llavero acrílico con diseño de Kaoruko Waguri y detalle de alambre.",
+            "precio": 8990,
+            "foto": "./assets/png/32.png",
+            "franquicia": "goods"
         },
         {
             "id": 33,
-            "nombre": "Deck de Commander Magic - Vampiric Bloodline",
-            "descripcion": "Mazo preconstruido de Commander centrado en vampiros.",
-            "precio": 34390,
-            "foto": "./assets/jpg/33-deck magic vampiric bloodline.jpg",
+            "nombre": "(keychain) Haikyuu!! – Caja 8 llaveros de Goma",
+            "descripcion": "Set de 8 figuras de goma estilo Nitotan con los personajes de Haikyuu!!",
+            "precio": 32390,
+            "foto": "./assets/png/33.png",
             "oferta": true,
-            "franquicia": "magic"
+            "franquicia": "goods"
         },
         {
             "id": 34,
-            "nombre": "Set de Dados Pokémon - Poké Ball",
-            "descripcion": "Set de dados con diseño de Poké Ball.",
-            "precio": 7990,
-            "foto": "/assets/jpg/34- set dados pokemon.jpg",
-            "franquicia": "pokemon"
+            "nombre": "(calendario)Sumikko Gurashi – Calendario de Escritorio",
+            "descripcion": "Calendario de mesa con adorables ilustraciones de Sumikko Gurashi.",
+            "precio": 6990,
+            "foto": "/assets/png/34.png",
+            "franquicia": "goods"
         },
         {
             "id": 35,
-            "nombre": "Tapete de Juego Magic: The Gathering - Chandra Nalaar",
-            "descripcion": "Tapete de juego con arte de Chandra Nalaar para Magic: The Gathering.",
-            "precio": 15990,
-            "foto": "./assets/jpg/35-mat magic chandra nalaar.jpg",
+            "nombre": "(stand) Haikyuu!! The Way Home – Acrílico Stand Shoyo Hinata",
+            "descripcion": "Figura acrílica de Shoyo Hinata en la colección The Way Home.",
+            "precio": 7990,
+            "foto": "./assets/png/35.png",
             "oferta": true,
-            "franquicia": "magic"
+            "franquicia": "goods"
         },
         {
             "id": 36,
-            "nombre": "Booster Pack Pokémon - Chilling Reign",
-            "descripcion": "Sobre de cartas de la expansión Chilling Reign de Pokémon TCG.",
-            "precio": 4990,
-            "foto": "./assets/jpg/36-pack pokemon chilling reign.jpg",
-            "franquicia": "pokemon"
+            "nombre": "BanG Dream! Ave Mujica – CD Regular Edition (+ Bromide)",
+            "descripcion": "Edición regular del nuevo lanzamiento de Ave Mujica para BanG Dream!, incluye un bromide de regalo.",
+            "precio": 12990,
+            "foto": "./assets/png/36.png",
+            "franquicia": "cds"
         },
         {
             "id": 37,
-            "nombre": "Estructura de Mazo Yu-Gi-Oh! - Rokket Revolt",
-            "descripcion": "Mazo estructurado de Yu-Gi-Oh! con temática de Rokket.",
-            "precio": 11990,
-            "foto": "./assets/png/37- deck yugi rokket revolt.png",
-            "franquicia": "yugioh"
+            "nombre": "BanG Dream! Ave Mujica – Limited Deluxe Edition (+ Bromide, Pin y Llavero)",
+            "descripcion": "Edición limitada de producción deluxe del nuevo título de Ave Mujica para BanG Dream!, con bromide, pin y llavero exclusivos.",
+            "precio": 126990,
+            "foto": "./assets/png/37.png",
+            "franquicia": "cds"
         },
         {
             "id": 38,
-            "nombre": "Pack de Cartas Promocionales Magic: The Gathering - Ikoria",
-            "descripcion": "Caja de sobres de cartas promocionales de la expansión Ikoria.",
+            "nombre": "Hina Tachibana – HOLIC [Limited First Edition]",
+            "descripcion": "Edición limitada de primera producción de HOLIC, el nuevo lanzamiento musical de Hina Tachibana.",
             "precio": 39990,
-            "foto": "./assets/jpg/38-box magic ikoria.jpg",
+            "foto": "./assets/png/38.png",
             "oferta": true,
-            "franquicia": "magic"
+            "franquicia": "cds"
         },
         {
             "id": 39,
-            "nombre": "Lata de Almacenamiento Pokémon - Galar Power",
-            "descripcion": "Lata de almacenamiento con diseño de Pokémon de la región Galar, incluye sobre.",
-            "precio": 13990,
-            "foto": "./assets/jpg/39-tin pokemon galar power.jpg",
-            "franquicia": "pokemon"
+            "nombre": "My Hero Academia Season 7 ED2 – Rokutousei by Zarame [Limited Edition CD+DVD]",
+            "descripcion": "Edición limitada de producción del segundo ending de la temporada 7 de My Hero Academia, ‘Rokutousei’ interpretado por Zarame, incluye CD + DVD.",
+            "precio": 11990,
+            "foto": "./assets/png/39.png",
+            "franquicia": "cds"
         },
         {
             "id": 40,
-            "nombre": "Booster Box Magic: The Gathering - Throne of Eldraine",
-            "descripcion": "Caja con 36 sobres de la expansión Throne of Eldraine de Magic: The Gathering.",
-            "precio": 179990,
-            "foto": "./assets/jpg/40-box magic throne of eldraine.jpg",
+            "nombre": "THE IDOLM@STER SideM – Fantastic Combination ~ PINATATIME!! ~ High x Joker",
+            "descripcion": "CD musical oficial de THE IDOLM@STER SideM, parte de la serie Fantastic Combination, con High x Joker.",
+            "precio": 10990,
+            "foto": "./assets/png/40.png",
             "oferta": true,
-            "franquicia": "magic"
+            "franquicia": "cds"
         },
         {
             "id": 41,
-            "nombre": "Tapete de Juego Yu-Gi-Oh! - Dark Magician Girl",
-            "descripcion": "Tapete oficial con diseño de Dark Magician Girl.",
-            "precio": 15990,
-            "foto": "./assets/png/41-mat yugi magician girl.png",
-            "franquicia": "yugioh"
+            "nombre": "PLAVE – Kakurenbo [Edición Solo BAMBY]",
+            "descripcion": "Edición especial con portada individual de BAMBY para el sencillo Kakurenbo de PLAVE.",
+            "precio": 16990,
+            "foto": "./assets/png/41.png",
+            "franquicia": "cds"
         },
         {
             "id": 42,
-            "nombre": "Deck de Inicio Yu-Gi-Oh! - Mechanized Madness",
-            "descripcion": "Mazo de inicio basado en el arquetipo de máquinas.",
-            "precio": 7990,
-            "foto": "./assets/png/42-deck yugi mechanized madness.png",
-            "franquicia": "yugioh"
+            "nombre": "Paradox Live – Battle of Unity Round 3 FUTURE",
+            "descripcion": "Tercera entrega de la serie Battle of Unity de Paradox Live, con nuevas canciones y duelos musicales.",
+            "precio": 11990,
+            "foto": "./assets/png/42.png",
+            "franquicia": "cds"
         },
         {
             "id": 43,
-            "nombre": "Booster Pack Magic: The Gathering - Core Set 2021",
-            "descripcion": "Sobre de cartas de la edición Core Set 2021 de Magic: The Gathering.",
-            "precio": 4990,
-            "foto": "./assets/jpg/43-pack magic core set.jpg",
+            "nombre": "Hatsune Miku Colorful Stage! – Yoka ni Mitorete / D/N/A (Nightcord at 25:00)",
+            "descripcion": "CD oficial del juego Hatsune Miku: Colorful Stage!",
+            "precio": 11990,
+            "foto": "./assets/png/43.png",
             "oferta": true,
-            "franquicia": "magic"
+            "franquicia": "cds"
         },
         {
             "id": 44,
-            "nombre": "Álbum Coleccionador Pokémon - Mewtwo",
-            "descripcion": "Álbum de colección con diseño de Mewtwo para almacenar cartas.",
-            "precio": 14390,
-            "foto": "./assets/jpg/44-album pokemon mewtwo.jpg",
-            "franquicia": "pokemon"
+            "nombre": "Astro Dive – First Message -LMLMM x x x -",
+            "descripcion": "Primer lanzamiento de Astro Dive, un álbum con la energía única de la agrupación.",
+            "precio": 24390,
+            "foto": "./assets/png/44.png",
+            "franquicia": "cds"
         },
         {
             "id": 45,
-            "nombre": "Caja de Entrenador Élite Pokémon - Vivid Voltage",
-            "descripcion": "Caja con 8 sobres, fundas y accesorios de la expansión Vivid Voltage.",
-            "precio": 39990,
-            "foto": "./assets/jpg/45- box pokemon elite vivid voltage.jpg",
+            "nombre": "BanG Dream! Roselia – Ishizue no Hanakanmuri [Edición Regular]",
+            "descripcion": "Edición regular del lanzamiento musical de Roselia para BanG Dream!, titulado Ishizue no Hanakanmuri.",
+            "precio": 12990,
+            "foto": "./assets/png/45.png",
             "oferta": true,
-            "franquicia": "pokemon"
+            "franquicia": "cds"
         },
         {
             "id": 46,
-            "nombre": "Booster Box Yu-Gi-Oh! - Lightning Overdrive",
-            "descripcion": "Caja con 24 sobres de la expansión Lightning Overdrive.",
-            "precio": 75990,
-            "foto": "./assets/png/46 box yugi lightning overdrive.png",
-            "franquicia": "yugioh"
+            "nombre": "(doll)Blue Lock – Peluche Pien Rin Itoshi",
+            "descripcion": "Peluche oficial de Pien Rin Itoshi de Blue Lock, ideal para coleccionistas y fans del manga/anime.",
+            "precio": 41990,
+            "foto": "./assets/png/46.png",
+            "franquicia": "goods"
         },
         {
             "id": 47,
-            "nombre": "Pack 2 Deck de Commander Magic - Kaldheim",
-            "descripcion": "2 Mazos preconstruido de Commander centrado en elfos.",
-            "precio": 35490,
-            "foto": "./assets/jpg/47-pack magic commander kaldheim.jpg",
+            "nombre": "(doll) BanG Dream! – Peluche Kaoru Seta (Hello, Happy World!)",
+            "descripcion": "(doll) Peluche oficial de Kaoru Seta de la banda Hello, Happy World! de BanG Dream!",
+            "precio": 32000,
+            "foto": "./assets/png/47.png",
             "oferta": true,
-            "franquicia": "magic"
+            "franquicia": "goods"
         },
         {
             "id": 48,
-            "nombre": "Set de Dados Magic: The Gathering - Phyrexian",
-            "descripcion": "Set de dados con símbolos de Phyrexia.",
-            "precio": 12990,
-            "foto": "./assets/png/48-dados magic.png",
-            "franquicia": "magic"
+            "nombre": "(figura bishoujo) Hatsune Miku EXPO 10th Anniversary",
+            "descripcion": "Figura a escala 1/7 de Hatsune Miku conmemorativa del 10º aniversario del EXPO.",
+            "precio": 184490,
+            "foto": "./assets/png/48.png",
+            "franquicia": "figures"
         },
         {
             "id": 49,
-            "nombre": "Tapete de Juego Pokémon - Legendary Birds",
-            "descripcion": "Tapete oficial con diseño de los pájaros legendarios.",
-            "precio": 17590,
-            "foto": "./assets/jpg/49-mat pokemon legendary birds.jpg",
+            "nombre": "(nendoroid)PICCODO Action Doll X Honkai: Star Rail – Chibi Doll Jiaoqiu",
+            "descripcion": "Figura chibi articulada de Jiaoqiu de Honkai: Star Rail en formato PICCODO Action.",
+            "precio": 41380,
+            "foto": "./assets/png/49.png",
             "oferta": true,
-            "franquicia": "pokemon"
+            "franquicia": "figures"
         },
         {
             "id": 50,
-            "nombre": "Fundas para Cartas - Dragon Shield Matte Blue",
-            "descripcion": "Pack de 100 fundas premium para cartas.",
+            "nombre": "Naruto vol. 01",
+            "descripcion": "Naruto Vol. 1 - El inicio de la aventura de Naruto Uzumaki.",
             "precio": 9590,
-            "foto": "./assets/png/50-fundas magic.png",
-            "franquicia": "magic"
+            "foto": "./assets/png/50.png",
+            "franquicia": "mangas"
+        },
+        {
+            "id": 51,
+            "nombre": "Manga Boy Meets Maria",
+            "descripcion": "Boy Meets Maria es un manga de género shōnen-ai ilustrado y escrito por Peyo.",
+            "precio": 15990,
+            "foto": "./assets/png/51.png",
+            "franquicia": "mangas"
+        },
+        {
+            "id": 52,
+            "nombre": "Nana tomo 01",
+            "descripcion": "Primer tomo del manga NANA, que sigue la vida de dos jóvenes mujeres con el mismo nombre pero personalidades y sueños muy diferentes.",
+            "precio": 9590,
+            "foto": "./assets/png/52.png",
+            "franquicia": "mangas"
         }
     ]
 }
