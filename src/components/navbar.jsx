@@ -28,7 +28,7 @@ const Navbar = () => {
         {/* Logo y título */}
         <Link to="/" className="navbar-brand d-flex align-items-center">
           <img 
-            src='/assets/png/logoRocket1.png'
+            src='/assets/png/logo.png'
             alt="TCG Store Logo" 
             className="h-10 w-10 mr-2" 
             height="70"
