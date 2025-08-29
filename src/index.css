@@ -1,10 +1,11 @@
 :root {
-  --rosado-oscuro: #A37794; 
-  --rosado-medium: #f0a6ca; 
-  --rosa-pastel: #f9d1e0; 
-  --rosa-claro: #f7e1e7; 
-  --negro: #000000; 
-  --gris-oscuro: #4a4a4a;
+  --rosado-oscuro: #572649;
+  --rosado-medium: #f0a6ca;
+  --rosa-pastel: #fcbacb;
+  --rosa-claro: #f5d3dd;
+  --negro: #1e1e1e;
+  --gris:#fdeaf2;
+  --gris-oscuro: #c7c8ca;
 }
 
 body {
@@ -12,25 +13,66 @@ body {
   background-color: #f8fafc;
 }
 
-/* Personalización de Bootstrap */
-.btn-primary {
-  background-color: var(--rosado-oscuro);
-  border-color: var(--rosado-oscuro);
+.bg-goods,.bg-cds{
+background-color: var(--rosado-oscuro) !important;
 }
 
-.btn-primary:hover {
-  background-color: var(--negro);
-  border-color: var(--negro);
+.bg-figures,.bg-mangas{
+background-color: var(--negro) !important;
+}
+.btn-primary {
+  background-color: var(--rosado-oscuro) !important;
+  border-color: var(--rosado-oscuro) !important;
+}
+.btn-categoria {
+  background-color: var(--gris-oscuro) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--rosado-medium) !important;
+  border-color: var(--rosado-medium) !important;
 }
 
 .btn-outline-primary {
-  color: var(--rosado-oscuro);
-  border-color: var(--rosado-oscuro);
+  color: var(--rosado-oscuro) !important;
+  border-color: var(--rosado-oscuro) !important;
 }
 
-.btn-outline-primary:hover {
-  background-color: var(--rosado-oscuro);
-  border-color: var(--rosado-oscuro);
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--rosado-oscuro) !important;
+  color: white !important;
+  border-color: var(--rosado-oscuro) !important;
+}
+
+.btn-danger {
+  background-color: var(--rosado-oscuro) !important;
+  border-color: var(--rosado-oscuro) !important;
+}
+
+.btn-outline-danger {
+  color: var(--rosado-oscuro) !important;
+  border-color: var(--rosado-oscuro) !important;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+  background-color: var(--rosado-oscuro) !important;
+  color: white !important;
+  border-color: var(--rosado-oscuro) !important;
+}
+
+.input-group .btn {
+  background-color: var(--rosado-oscuro) !important;
+  color: white !important;
+  border-color: var(--rosado-oscuro) !important;
+}
+
+.input-group .btn:hover,
+.input-group .btn:focus {
+  background-color: var(--rosado-medium) !important;
+  border-color: var(--rosado-medium) !important;
 }
 
 .bg-primary {
@@ -41,7 +83,21 @@ body {
   color: var(--rosado-oscuro) !important;
 }
 
-/* Estilos para cards */
+.badge.bg-primary {
+  background-color: var(--rosado-oscuro) !important;
+  text-transform: capitalize;
+}
+
+.fw-bold {
+  color: var(--rosado-oscuro);
+}
+
+.fw-bold-titulohome {
+  color: var(--negro);
+  font-weight: 900;
+  font-size: 5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
@@ -54,14 +110,6 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Banner principal */
-.banner-hero {
-  background: linear-gradient(135deg, var(--rosado-oscuro) 0%, var(--rosado-medium) 100%);
-  border-radius: 0 0 20px 20px;
-  margin-bottom: 30px;
-}
-
-/* Categorías destacadas */
 .card.bg-gradient {
   background-size: 200% 200%;
   transition: all 0.3s ease;
@@ -71,34 +119,26 @@ body {
   background-position: right center;
 }
 
-/* Estilos para la navegación de categorías */
+.banner-hero {
+  background: linear-gradient(
+    135deg,
+    var(--rosado-oscuro) 0%,
+    var(--rosado-medium) 100%
+  );
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 30px;
+}
+
 .btn-group .btn {
   border-radius: 20px;
   padding: 8px 16px;
 }
 
-/* Badge personalizado */
-.badge.bg-primary {
-  background-color: var(--rosado-oscuro) !important;
-  text-transform: capitalize;
-}
-
-/* Formato para los precios */
-.fw-bold {
-  color: var(--rosado-oscuro);
-}
-
-.fw-bold-titulohome {
-  color: var(--rosa-pastel);
-}
-
-/* Personalización del footer */
 footer {
   background-color: var(--rosa-claro);
   color: var(--negro);
 }
 
-/* Animación para el loader */
 @keyframes pulse {
   0% {
     transform: scale(0.95);

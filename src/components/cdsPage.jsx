@@ -37,7 +37,7 @@ const PageCds = () => {
                             <div className="card-body">
                                 <h5 className="card-title">{product.nombre}</h5>
                                 <p className="card-text">{product.descripcion}</p>
-                                <p className="text-success">${product.precio.toLocaleString()}</p>
+                                <p className="text-primary">${product.precio.toLocaleString()}</p>
 
                                 <button
                                     className="btn btn-outline-primary btn-sm mt-2"
@@ -45,7 +45,7 @@ const PageCds = () => {
                                 >
                                     Añadir al carrito
                                 </button>
-                                {product.oferta && <span className="badge bg-danger">Oferta</span>}
+                                {product.oferta && <span className="badge bg-primary">Oferta</span>}
                             </div>
                         </div>
                     </div>

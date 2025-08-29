@@ -45,7 +45,7 @@ const PageGoods = () => {
                 >
                   Añadir al carrito
                 </button>
-                {product.oferta && <span className="badge bg-danger">Oferta</span>}
+                {product.oferta && <span className="badge bg-primary">Oferta</span>}
               </div>
             </div>
           </div>

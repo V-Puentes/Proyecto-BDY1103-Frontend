@@ -12,13 +12,11 @@ const ThankYouPage = () => {
   return (
     <div className="container mt-5">
       <div className="text-center">
-        {/* Icono de confirmación */}
         <CheckCircle size={64} className="text-success mb-3" />
         <h1 className="display-4 fw-bold">¡Gracias por su compra!</h1>
         <p className="lead">Su pedido ha sido procesado exitosamente.</p>
       </div>
 
-      {/* Resumen de la compra */}
       <div className="row justify-content-center mt-5">
         <div className="col-md-8">
           <div className="card shadow-sm">
@@ -60,7 +58,6 @@ const ThankYouPage = () => {
         </div>
       </div>
 
-      {/* Botón para volver al inicio */}
       <div className="d-grid gap-2 mt-5">
         <Link to="/" className="btn btn-primary btn-lg" onClick={vaciarCarrito}>
           <Home className="me-2" size={20} />

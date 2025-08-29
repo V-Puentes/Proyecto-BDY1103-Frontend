@@ -29,7 +29,7 @@ const PageMangas = () => {
   return (
     <div className="container mt-4">
       <h2 className="text-center mb-4">Mangas</h2>
-     <div className="row">
+    <div className="row">
         {products.map(product => (
           <div key={product.id} className="col-md-4 mb-4">
             <div className="card shadow-sm">
@@ -45,7 +45,7 @@ const PageMangas = () => {
                 >
                   Añadir al carrito
                 </button>
-                {product.oferta && <span className="badge bg-danger">Oferta</span>}
+                {product.oferta && <span className="badge bg-primary">Oferta</span>}
               </div>
             </div>
           </div>

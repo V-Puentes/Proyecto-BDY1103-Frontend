@@ -2,9 +2,9 @@ import React from 'react';
 
 const BannerHero = ({ title, description, imageUrl, imageAlt }) => {
   return (
-    <div 
-      className="banner-hero bg-primary text-white" 
-      style={{ backgroundColor: 'var(--rosado-oscuro)' }}  
+    <div
+      className="banner-hero bg-primary text-white"
+      style={{ backgroundColor: 'var(--rosado-oscuro)' }}
     >
       <div className="container">
         <div className="row align-items-center">
@@ -13,12 +13,12 @@ const BannerHero = ({ title, description, imageUrl, imageAlt }) => {
             <p className="lead">{description}</p>
           </div>
           <div className="col-md-6 text-center">
-            <img 
+            <img
               src='/assets/png/logoRocket2.png'
               alt={imageAlt || 'portada'}
               className="img-fluid rounded shadow-lg"
               height="300"
-              width="300"  
+              width="300"
             />
           </div>
         </div>
