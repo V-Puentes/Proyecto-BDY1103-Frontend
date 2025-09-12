@@ -60,8 +60,8 @@ CREATE TABLE producto (
     franquicia_producto VARCHAR2(100),
     foto_producto VARCHAR2(255),
     cod_compra NUMBER,
-    CONSTRAINT fk_producto_compra FOREIGN KEY (cod_compra)
-    REFERENCES compra(cod_compra)
+    CONSTRAINT fk_producto_compra FOREIGN KEY (cod_compra) 
+REFERENCES compra(cod_compra) ON DELETE CASCADE
 );
 
 -- Comentarios para documentar las tablas
