@@ -1,0 +1,31 @@
+-- En APEX crear un Web Service Module
+-- O crear un RESTful Service directo en la BD
+BEGIN
+    ORDS.ENABLE_SCHEMA(p_enabled => TRUE);
+    COMMIT;
+END;
+/
+
+-- Crear REST endpoint
+BEGIN
+    ORDS.DEFINE_MODULE(
+        p_module_name => 'metricas.api',
+        p_base_path => '/metricas/',
+        p_items_per_page => 25
+    );
+    
+    ORDS.DEFINE_TEMPLATE(
+        p_module_name => 'metricas.api',
+        p_pattern => 'ultimos/'
+    );
+    
+    ORDS.DEFINE_HANDLER(
+        p_module_name => 'metricas.api',
+        p_pattern => 'ultimos/',
+        p_method => 'GET',
+        p_source_type => ORDS.source_type_collection_feed,
+        p_source => 'SELECT * FROM resultados_calculos ORDER BY fecha_calculo DESC'
+    );
+    COMMIT;
+END;
+/
