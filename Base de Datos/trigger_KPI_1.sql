@@ -1,0 +1,9 @@
+--trigger
+BEGIN
+    PROC_REGISTROS_POR_ANIO;
+END;
+/
+
+
+--para testear
+SELECT * FROM KPI_1 ORDER BY ANIO;
