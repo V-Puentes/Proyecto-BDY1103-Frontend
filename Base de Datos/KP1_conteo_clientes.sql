@@ -1,18 +1,20 @@
---==============PROCEDURE 1================--
-KPI_1 MODIFY ANIO VARCHAR2(20);
 CREATE OR REPLACE PROCEDURE PROC_REGISTROS_POR_ANIO IS
-    v_count_2020 NUMBER := 0;
-    v_count_2021 NUMBER := 0;
-    v_count_2022 NUMBER := 0;
-    v_count_2023 NUMBER := 0;
-    v_count_2024 NUMBER := 0;
-    v_count_este_anio NUMBER := 0;
-    v_count_otros NUMBER := 0;
-    v_anio_actual NUMBER(4);
-    v_total_cli NUMBER := 0;
+    v_count_2020 NUMBER(4);
+    v_count_2021 NUMBER(4);
+    v_count_2022 NUMBER(4);
+    v_count_2023 NUMBER(4);
+    v_count_2024 NUMBER(4);
+    v_count_2025 NUMBER(4);
+    v_total_cli NUMBER(4);
 BEGIN
     -- Obtener año actual
-    SELECT EXTRACT(YEAR FROM SYSDATE) INTO v_anio_actual FROM DUAL;
+    v_count_2020 := 0;
+    v_count_2021 := 0;
+    v_count_2022 := 0;
+    v_count_2023 := 0;
+    v_count_2024 := 0;
+    v_total_cli := 0;
+    v_count_2025 :=2025;
     
     -- Limpiar tabla KPI_1
     DELETE FROM KPI_1;
@@ -24,17 +26,15 @@ BEGIN
         COUNT(CASE WHEN EXTRACT(YEAR FROM FECHA_REG_CLI) = 2022 THEN 1 END),
         COUNT(CASE WHEN EXTRACT(YEAR FROM FECHA_REG_CLI) = 2023 THEN 1 END),
         COUNT(CASE WHEN EXTRACT(YEAR FROM FECHA_REG_CLI) = 2024 THEN 1 END),
-        COUNT(CASE WHEN EXTRACT(YEAR FROM FECHA_REG_CLI) = v_anio_actual THEN 1 END),
-        COUNT(CASE WHEN EXTRACT(YEAR FROM FECHA_REG_CLI) > 2024 AND EXTRACT(YEAR FROM FECHA_REG_CLI) != v_anio_actual THEN 1 END),
-        COUNT(*)
+        COUNT(CASE WHEN EXTRACT(YEAR FROM FECHA_REG_CLI) = 2025 THEN 1 END),
+        v_total_cli
     INTO 
         v_count_2020,
         v_count_2021,
         v_count_2022,
         v_count_2023,
-        v_count_2024,
-        v_count_este_anio,
-        v_count_otros,
+        v_count_2024,    
+        v_count_2025,
         v_total_cli
     FROM CLIENTE;
     
@@ -45,8 +45,7 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('2022: ' || v_count_2022);
     DBMS_OUTPUT.PUT_LINE('2023: ' || v_count_2023);
     DBMS_OUTPUT.PUT_LINE('2024: ' || v_count_2024);
-    DBMS_OUTPUT.PUT_LINE('Este año: ' || v_count_este_anio);
-    DBMS_OUTPUT.PUT_LINE('Otros años: ' || v_count_otros);
+    DBMS_OUTPUT.PUT_LINE('2025: ' || v_count_2025);
     
     -- Insertar datos
     INSERT INTO KPI_1 (KPI_1_ID, ANIO, TOTAL_REGISTROS) 
@@ -65,10 +64,7 @@ BEGIN
     VALUES (KPI_1_SEQ.NEXTVAL, '2024', v_count_2024);
     
     INSERT INTO KPI_1 (KPI_1_ID, ANIO, TOTAL_REGISTROS) 
-    VALUES (KPI_1_SEQ.NEXTVAL, 'Este año', v_count_este_anio);
-    
-    INSERT INTO KPI_1 (KPI_1_ID, ANIO, TOTAL_REGISTROS) 
-    VALUES (KPI_1_SEQ.NEXTVAL, 'Otros años', v_count_otros);
+    VALUES (KPI_1_SEQ.NEXTVAL, '2025', v_count_2025);
     
     COMMIT;
     
@@ -80,5 +76,3 @@ EXCEPTION
         RAISE;
 END PROC_REGISTROS_POR_ANIO;
 /
-
---==============PROCEDURE 2================--
