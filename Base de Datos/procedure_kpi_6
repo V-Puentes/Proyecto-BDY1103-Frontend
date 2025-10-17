@@ -1,0 +1,292 @@
+CREATE OR REPLACE PROCEDURE PROC_KPI6_CLIENTES_RECURRENTES IS
+
+    -- Tipos para almacenar datos de clientes
+    TYPE tipo_clientes_anio IS TABLE OF NUMBER INDEX BY VARCHAR2(4);
+    TYPE tipo_contador_compras IS TABLE OF NUMBER INDEX BY NUMBER; -- RUN_CLI como índice
+    
+    -- Variables para almacenar datos por año
+    V_TOTAL_CLIENTES tipo_clientes_anio;
+    V_CLIENTES_RECURRENTES tipo_clientes_anio;
+    V_CLIENTES_NUEVOS tipo_clientes_anio;
+    V_CLIENTES_UNICOS tipo_clientes_anio;
+    V_TASA_RECURRENCIA tipo_clientes_anio;
+    
+    -- Variables de trabajo
+    V_ANIO_COMPRA VARCHAR2(4);
+    V_RUN_CLI COMPRA.CLIENTE_RUN_CLI%TYPE;
+    V_FECHA_COMPRA COMPRA.FECHA_COM%TYPE;
+    
+    -- Variables para cálculos
+    V_TASA_RECURRENCIA_CALC NUMBER(10,4);
+    V_TASA_ANTERIOR NUMBER(10,4);
+    V_VARIACION_TASA NUMBER(10,4);
+    V_TENDENCIA VARCHAR2(15);
+    V_CRECIMIENTO_CLIENTES NUMBER;
+    
+    -- Lista de años con compras
+    TYPE tipo_anios IS TABLE OF VARCHAR2(4);
+    V_ANIOS tipo_anios;
+    
+    -- Estructura para contar compras por cliente por año
+    TYPE tipo_compras_cliente IS TABLE OF tipo_contador_compras INDEX BY VARCHAR2(4);
+    V_COMPRAS_POR_CLIENTE tipo_compras_cliente;
+
+    -- Cursor para todas las compras ordenadas por año y cliente
+    CURSOR C_COMPRAS IS
+        SELECT CLIENTE_RUN_CLI, FECHA_COM
+        FROM COMPRA
+        ORDER BY EXTRACT(YEAR FROM FECHA_COM), CLIENTE_RUN_CLI;
+
+BEGIN
+    -- Inicializar estructuras
+    V_TOTAL_CLIENTES.DELETE;
+    V_CLIENTES_RECURRENTES.DELETE;
+    V_CLIENTES_NUEVOS.DELETE;
+    V_CLIENTES_UNICOS.DELETE;
+    V_TASA_RECURRENCIA.DELETE;
+    V_COMPRAS_POR_CLIENTE.DELETE;
+    
+    -- Obtener años únicos de las compras
+    BEGIN
+        SELECT DISTINCT TO_CHAR(FECHA_COM, 'YYYY')
+        BULK COLLECT INTO V_ANIOS
+        FROM COMPRA
+        ORDER BY 1;
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            V_ANIOS := tipo_anios();
+    END;
+    
+    -- Inicializar contadores por año
+    FOR I IN 1..V_ANIOS.COUNT LOOP
+        V_TOTAL_CLIENTES(V_ANIOS(I)) := 0;
+        V_CLIENTES_RECURRENTES(V_ANIOS(I)) := 0;
+        V_CLIENTES_NUEVOS(V_ANIOS(I)) := 0;
+        V_CLIENTES_UNICOS(V_ANIOS(I)) := 0;
+        V_TASA_RECURRENCIA(V_ANIOS(I)) := 0;
+    END LOOP;
+
+    -- Procesar todas las compras para contar frecuencia por cliente por año
+    FOR REGISTRO IN C_COMPRAS LOOP
+        V_RUN_CLI := REGISTRO.CLIENTE_RUN_CLI;
+        V_ANIO_COMPRA := TO_CHAR(EXTRACT(YEAR FROM REGISTRO.FECHA_COM));
+        
+        -- Inicializar contador para el año si no existe
+        IF NOT V_COMPRAS_POR_CLIENTE.EXISTS(V_ANIO_COMPRA) THEN
+            V_COMPRAS_POR_CLIENTE(V_ANIO_COMPRA) := tipo_contador_compras();
+        END IF;
+        
+        -- Contar compras por cliente en el año
+        IF NOT V_COMPRAS_POR_CLIENTE(V_ANIO_COMPRA).EXISTS(V_RUN_CLI) THEN
+            V_COMPRAS_POR_CLIENTE(V_ANIO_COMPRA)(V_RUN_CLI) := 1;
+        ELSE
+            V_COMPRAS_POR_CLIENTE(V_ANIO_COMPRA)(V_RUN_CLI) := V_COMPRAS_POR_CLIENTE(V_ANIO_COMPRA)(V_RUN_CLI) + 1;
+        END IF;
+    END LOOP;
+
+    -- Analizar clientes por año
+    FOR I IN 1..V_ANIOS.COUNT LOOP
+        V_ANIO_COMPRA := V_ANIOS(I);
+        
+        -- Procesar cada cliente del año
+        IF V_COMPRAS_POR_CLIENTE.EXISTS(V_ANIO_COMPRA) THEN
+            DECLARE
+                v_cliente NUMBER;
+                v_compras NUMBER;
+                v_es_recurrente BOOLEAN;
+                v_es_nuevo BOOLEAN;
+                v_anio_anterior VARCHAR2(4);
+            BEGIN
+                v_anio_anterior := TO_CHAR(TO_NUMBER(V_ANIO_COMPRA) - 1);
+                
+                v_cliente := V_COMPRAS_POR_CLIENTE(V_ANIO_COMPRA).FIRST;
+                WHILE v_cliente IS NOT NULL LOOP
+                    v_compras := V_COMPRAS_POR_CLIENTE(V_ANIO_COMPRA)(v_cliente);
+                    
+                    -- Contar total de clientes
+                    V_TOTAL_CLIENTES(V_ANIO_COMPRA) := V_TOTAL_CLIENTES(V_ANIO_COMPRA) + 1;
+                    
+                    -- Determinar si es cliente recurrente (más de 1 compra)
+                    IF v_compras > 1 THEN
+                        V_CLIENTES_RECURRENTES(V_ANIO_COMPRA) := V_CLIENTES_RECURRENTES(V_ANIO_COMPRA) + 1;
+                    ELSE
+                        V_CLIENTES_UNICOS(V_ANIO_COMPRA) := V_CLIENTES_UNICOS(V_ANIO_COMPRA) + 1;
+                    END IF;
+                    
+                    -- Determinar si es cliente nuevo (no existía en año anterior)
+                    v_es_nuevo := TRUE;
+                    IF V_COMPRAS_POR_CLIENTE.EXISTS(v_anio_anterior) THEN
+                        IF V_COMPRAS_POR_CLIENTE(v_anio_anterior).EXISTS(v_cliente) THEN
+                            v_es_nuevo := FALSE;
+                        END IF;
+                    END IF;
+                    
+                    IF v_es_nuevo THEN
+                        V_CLIENTES_NUEVOS(V_ANIO_COMPRA) := V_CLIENTES_NUEVOS(V_ANIO_COMPRA) + 1;
+                    END IF;
+                    
+                    v_cliente := V_COMPRAS_POR_CLIENTE(V_ANIO_COMPRA).NEXT(v_cliente);
+                END LOOP;
+            END;
+        END IF;
+        
+        -- Calcular tasa de recurrencia
+        IF V_TOTAL_CLIENTES(V_ANIO_COMPRA) > 0 THEN
+            V_TASA_RECURRENCIA(V_ANIO_COMPRA) := (V_CLIENTES_RECURRENTES(V_ANIO_COMPRA) / V_TOTAL_CLIENTES(V_ANIO_COMPRA)) * 100;
+        END IF;
+    END LOOP;
+
+    -- Insertar datos en KPI_6
+    FOR I IN 1..V_ANIOS.COUNT LOOP
+        V_ANIO_COMPRA := V_ANIOS(I);
+        
+        -- Obtener tasa del año anterior para comparación
+        IF I > 1 THEN
+            V_TASA_ANTERIOR := V_TASA_RECURRENCIA(V_ANIOS(I-1));
+            V_CRECIMIENTO_CLIENTES := V_TOTAL_CLIENTES(V_ANIO_COMPRA) - V_TOTAL_CLIENTES(V_ANIOS(I-1));
+        ELSE
+            V_TASA_ANTERIOR := NULL;
+            V_CRECIMIENTO_CLIENTES := NULL;
+        END IF;
+        
+        -- Calcular variación de tasa
+        IF V_TASA_ANTERIOR IS NOT NULL AND V_TASA_ANTERIOR > 0 THEN
+            V_VARIACION_TASA := V_TASA_RECURRENCIA(V_ANIO_COMPRA) - V_TASA_ANTERIOR;
+        ELSE
+            V_VARIACION_TASA := NULL;
+        END IF;
+        
+        -- Determinar tendencia
+        IF V_VARIACION_TASA IS NOT NULL THEN
+            IF V_VARIACION_TASA > 3 THEN
+                V_TENDENCIA := 'AUMENTO FUERTE';
+            ELSIF V_VARIACION_TASA > 1 THEN
+                V_TENDENCIA := 'AUMENTO';
+            ELSIF V_VARIACION_TASA < -3 THEN
+                V_TENDENCIA := 'DISMINUYE FUERTE';
+            ELSIF V_VARIACION_TASA < -1 THEN
+                V_TENDENCIA := 'DISMINUYE';
+            ELSE
+                V_TENDENCIA := 'ESTABLE';
+            END IF;
+        ELSE
+            V_TENDENCIA := 'SIN COMPARACIÓN';
+        END IF;
+        
+        -- Insertar/actualizar KPI_6
+        MERGE INTO KPI_6 k
+        USING (
+            SELECT V_ANIO_COMPRA AS ANIO,
+                   V_TOTAL_CLIENTES(V_ANIO_COMPRA) AS TOTAL_CLIENTES,
+                   V_CLIENTES_RECURRENTES(V_ANIO_COMPRA) AS CLIENTES_RECURRENTES,
+                   V_CLIENTES_NUEVOS(V_ANIO_COMPRA) AS CLIENTES_NUEVOS,
+                   V_CLIENTES_UNICOS(V_ANIO_COMPRA) AS CLIENTES_UNICOS,
+                   V_TASA_RECURRENCIA(V_ANIO_COMPRA) AS TASA_RECURRENCIA,
+                   V_TASA_ANTERIOR AS TASA_ANTERIOR,
+                   V_VARIACION_TASA AS VARIACION_TASA,
+                   V_TENDENCIA AS TENDENCIA,
+                   V_CRECIMIENTO_CLIENTES AS CRECIMIENTO_CLIENTES,
+                   SYSDATE AS FECHA_ACTUALIZACION
+            FROM DUAL
+        ) src ON (k.ANIO = src.ANIO)
+        WHEN MATCHED THEN
+            UPDATE SET 
+                k.TOTAL_CLIENTES = src.TOTAL_CLIENTES,
+                k.CLIENTES_RECURRENTES = src.CLIENTES_RECURRENTES,
+                k.CLIENTES_NUEVOS = src.CLIENTES_NUEVOS,
+                k.CLIENTES_UNICOS = src.CLIENTES_UNICOS,
+                k.TASA_RECURRENCIA = src.TASA_RECURRENCIA,
+                k.TASA_ANTERIOR = src.TASA_ANTERIOR,
+                k.VARIACION_TASA = src.VARIACION_TASA,
+                k.TENDENCIA = src.TENDENCIA,
+                k.CRECIMIENTO_CLIENTES = src.CRECIMIENTO_CLIENTES,
+                k.FECHA_ACTUALIZACION = src.FECHA_ACTUALIZACION
+        WHEN NOT MATCHED THEN
+            INSERT (KPI_6_ID, ANIO, TOTAL_CLIENTES, CLIENTES_RECURRENTES, CLIENTES_NUEVOS,
+                    CLIENTES_UNICOS, TASA_RECURRENCIA, TASA_ANTERIOR, VARIACION_TASA,
+                    TENDENCIA, CRECIMIENTO_CLIENTES, FECHA_ACTUALIZACION)
+            VALUES (KPI_6_SEQ.NEXTVAL, src.ANIO, src.TOTAL_CLIENTES, src.CLIENTES_RECURRENTES, 
+                    src.CLIENTES_NUEVOS, src.CLIENTES_UNICOS, src.TASA_RECURRENCIA, 
+                    src.TASA_ANTERIOR, src.VARIACION_TASA, src.TENDENCIA, 
+                    src.CRECIMIENTO_CLIENTES, src.FECHA_ACTUALIZACION);
+    END LOOP;
+
+    -- Insertar resumen de tendencia general
+    DECLARE
+        V_ULTIMO_ANIO VARCHAR2(4);
+        V_PENULTIMO_ANIO VARCHAR2(4);
+        V_CRECIMIENTO_TOTAL NUMBER;
+        V_TASA_PROMEDIO NUMBER(10,4);
+        V_TOTAL_ANIOS_CON_DATOS NUMBER := 0;
+    BEGIN
+        IF V_ANIOS.COUNT >= 1 THEN
+            V_ULTIMO_ANIO := V_ANIOS(V_ANIOS.COUNT);
+            
+            -- Calcular crecimiento total (primer año vs último año)
+            IF V_ANIOS.COUNT >= 2 THEN
+                V_PENULTIMO_ANIO := V_ANIOS(1);
+                V_CRECIMIENTO_TOTAL := V_TOTAL_CLIENTES(V_ULTIMO_ANIO) - V_TOTAL_CLIENTES(V_PENULTIMO_ANIO);
+            ELSE
+                V_CRECIMIENTO_TOTAL := NULL;
+            END IF;
+            
+            -- Calcular tasa promedio de recurrencia
+            FOR I IN 1..V_ANIOS.COUNT LOOP
+                IF V_TASA_RECURRENCIA(V_ANIOS(I)) > 0 THEN
+                    V_TASA_PROMEDIO := V_TASA_PROMEDIO + V_TASA_RECURRENCIA(V_ANIOS(I));
+                    V_TOTAL_ANIOS_CON_DATOS := V_TOTAL_ANIOS_CON_DATOS + 1;
+                END IF;
+            END LOOP;
+            
+            IF V_TOTAL_ANIOS_CON_DATOS > 0 THEN
+                V_TASA_PROMEDIO := V_TASA_PROMEDIO / V_TOTAL_ANIOS_CON_DATOS;
+            END IF;
+            
+            -- Insertar resumen
+            MERGE INTO KPI_6 k
+            USING (
+                SELECT 'RESUMEN' AS ANIO,
+                       V_TOTAL_CLIENTES(V_ULTIMO_ANIO) AS TOTAL_CLIENTES,
+                       V_CLIENTES_RECURRENTES(V_ULTIMO_ANIO) AS CLIENTES_RECURRENTES,
+                       V_CLIENTES_NUEVOS(V_ULTIMO_ANIO) AS CLIENTES_NUEVOS,
+                       V_CLIENTES_UNICOS(V_ULTIMO_ANIO) AS CLIENTES_UNICOS,
+                       V_TASA_PROMEDIO AS TASA_RECURRENCIA,
+                       NULL AS TASA_ANTERIOR,
+                       NULL AS VARIACION_TASA,
+                       'RESUMEN' AS TENDENCIA,
+                       V_CRECIMIENTO_TOTAL AS CRECIMIENTO_CLIENTES,
+                       SYSDATE AS FECHA_ACTUALIZACION
+                FROM DUAL
+            ) src ON (k.ANIO = src.ANIO)
+            WHEN MATCHED THEN
+                UPDATE SET 
+                    k.TOTAL_CLIENTES = src.TOTAL_CLIENTES,
+                    k.CLIENTES_RECURRENTES = src.CLIENTES_RECURRENTES,
+                    k.CLIENTES_NUEVOS = src.CLIENTES_NUEVOS,
+                    k.CLIENTES_UNICOS = src.CLIENTES_UNICOS,
+                    k.TASA_RECURRENCIA = src.TASA_RECURRENCIA,
+                    k.CRECIMIENTO_CLIENTES = src.CRECIMIENTO_CLIENTES,
+                    k.FECHA_ACTUALIZACION = src.FECHA_ACTUALIZACION
+            WHEN NOT MATCHED THEN
+                INSERT (KPI_6_ID, ANIO, TOTAL_CLIENTES, CLIENTES_RECURRENTES, CLIENTES_NUEVOS,
+                        CLIENTES_UNICOS, TASA_RECURRENCIA, TASA_ANTERIOR, VARIACION_TASA,
+                        TENDENCIA, CRECIMIENTO_CLIENTES, FECHA_ACTUALIZACION)
+                VALUES (KPI_6_SEQ.NEXTVAL, src.ANIO, src.TOTAL_CLIENTES, src.CLIENTES_RECURRENTES, 
+                        src.CLIENTES_NUEVOS, src.CLIENTES_UNICOS, src.TASA_RECURRENCIA, 
+                        src.TASA_ANTERIOR, src.VARIACION_TASA, src.TENDENCIA, 
+                        src.CRECIMIENTO_CLIENTES, src.FECHA_ACTUALIZACION);
+        END IF;
+    END;
+
+    COMMIT;
+    
+    DBMS_OUTPUT.PUT_LINE('KPI_6 - Clientes recurrentes calculados exitosamente.');
+    DBMS_OUTPUT.PUT_LINE('Años procesados: ' || V_ANIOS.COUNT);
+    
+EXCEPTION
+    WHEN OTHERS THEN 
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Error en KPI_6: ' || SQLERRM);
+        RAISE;
+END PROC_KPI6_CLIENTES_RECURRENTES;
+/
