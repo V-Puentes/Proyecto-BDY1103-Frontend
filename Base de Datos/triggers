@@ -1,244 +1,56 @@
---Triggers para Package PKG_KPI_VENTAS_COMPRAS
+--Trigger para compras y ventas
 
--- Trigger al modificar COMPRA (afecta KPI_2 y KPI_3)
-CREATE OR REPLACE TRIGGER TRG_KPI_VENTAS_COMPRA
-    AFTER INSERT OR UPDATE OR DELETE ON COMPRA
-    DECLARE
-        PRAGMA AUTONOMOUS_TRANSACTION;
-    BEGIN
-        -- Esperar breve momento para agrupar operaciones
-        DBMS_LOCK.SLEEP(2);
-        
-        -- Ejecutar package de ventas y compras
-        PKG_KPI_VENTAS_COMPRAS.PROC_EJECUTAR_KPIS_VENTAS;
-        
-        COMMIT;
-        DBMS_OUTPUT.PUT_LINE('Package PKG_KPI_VENTAS_COMPRAS ejecutado por cambio en COMPRA');
-    EXCEPTION
-        WHEN OTHERS THEN
-            DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_VENTAS_COMPRA: ' || SQLERRM);
-            ROLLBACK;
-    END TRG_KPI_VENTAS_COMPRA;
+CREATE OR REPLACE TRIGGER TRG_KPI_VENTAS_COMPRAS
+
+AFTER INSERT OR UPDATE OR DELETE ON COMPRA
+BEGIN
+PKG_KPI_VENTAS_COMPRAS.RUN_ALL;
+
+EXCEPTION
+WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_VENTAS_COMPRAS: ' || SQLERRM);
+
+END TRG_KPI_VENTAS_COMPRAS;
 /
 
--- Trigger al modificar CARRITO (afecta KPI_7)
-CREATE OR REPLACE TRIGGER TRG_KPI_VENTAS_CARRITO
-    AFTER INSERT OR UPDATE OR DELETE ON CARRITO
-    DECLARE
-        PRAGMA AUTONOMOUS_TRANSACTION;
-    BEGIN
-        DBMS_LOCK.SLEEP(2);
-        
-        PKG_KPI_VENTAS_COMPRAS.PROC_EJECUTAR_KPIS_VENTAS;
-        
-        COMMIT;
-        DBMS_OUTPUT.PUT_LINE('Package PKG_KPI_VENTAS_COMPRAS ejecutado por cambio en CARRITO');
-    EXCEPTION
-        WHEN OTHERS THEN
-            DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_VENTAS_CARRITO: ' || SQLERRM);
-            ROLLBACK;
-    END TRG_KPI_VENTAS_CARRITO;
+--Trigger para clientes
+
+CREATE OR REPLACE TRIGGER TRG_KPI_CLIENTES
+
+AFTER INSERT OR UPDATE ON CLIENTE
+BEGIN
+PKG_KPI_CLIENTES_ENTREGAS.RUN_ALL;
+EXCEPTION
+WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_CLIENTES_SIMPLE: ' || SQLERRM);
+END TRG_KPI_CLIENTES;
 /
 
--- Trigger al modificar DETALLE_CARRITO (afecta KPI_7)
-CREATE OR REPLACE TRIGGER TRG_KPI_VENTAS_DETALLE
-    AFTER INSERT OR UPDATE OR DELETE ON DETALLE_CARRITO
-    DECLARE
-        PRAGMA AUTONOMOUS_TRANSACTION;
-    BEGIN
-        DBMS_LOCK.SLEEP(2);
-        
-        PKG_KPI_VENTAS_COMPRAS.PROC_EJECUTAR_KPIS_VENTAS;
-        
-        COMMIT;
-        DBMS_OUTPUT.PUT_LINE('Package PKG_KPI_VENTAS_COMPRAS ejecutado por cambio en DETALLE_CARRITO');
-    EXCEPTION
-        WHEN OTHERS THEN
-            DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_VENTAS_DETALLE: ' || SQLERRM);
-            ROLLBACK;
-    END TRG_KPI_VENTAS_DETALLE;
+--Trigger para entregas
 
+CREATE OR REPLACE TRIGGER TRG_KPI_ENTREGAS
 
+AFTER INSERT OR UPDATE OR DELETE ON ENTREGA
+BEGIN
+PKG_KPI_CLIENTES_ENTREGAS.RUN_ALL;
 
-
---Triggers para Package PKG_KPI_CLIENTES_ENTREGAS
-
--- Trigger al modificar CLIENTE (afecta KPI_1)
-CREATE OR REPLACE TRIGGER TRG_KPI_CLIENTES_CLIENTE
-    AFTER INSERT OR UPDATE OR DELETE ON CLIENTE
-    DECLARE
-        PRAGMA AUTONOMOUS_TRANSACTION;
-    BEGIN
-        DBMS_LOCK.SLEEP(2);
-        
-        PKG_KPI_CLIENTES_ENTREGAS.PROC_EJECUTAR_KPIS_CLIENTES;
-        
-        COMMIT;
-        DBMS_OUTPUT.PUT_LINE('Package PKG_KPI_CLIENTES_ENTREGAS ejecutado por cambio en CLIENTE');
-    EXCEPTION
-        WHEN OTHERS THEN
-            DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_CLIENTES_CLIENTE: ' || SQLERRM);
-            ROLLBACK;
-    END TRG_KPI_CLIENTES_CLIENTE;
+EXCEPTION
+WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_ENTREGAS_SIMPLE: ' || SQLERRM);
+END TRG_KPI_ENTREGAS;
 /
 
--- Trigger al modificar ENTREGA (afecta KPI_5)
-CREATE OR REPLACE TRIGGER TRG_KPI_CLIENTES_ENTREGA
-    AFTER INSERT OR UPDATE OR DELETE ON ENTREGA
-    DECLARE
-        PRAGMA AUTONOMOUS_TRANSACTION;
-    BEGIN
-        DBMS_LOCK.SLEEP(2);
-        
-        PKG_KPI_CLIENTES_ENTREGAS.PROC_EJECUTAR_KPIS_CLIENTES;
-        
-        COMMIT;
-        DBMS_OUTPUT.PUT_LINE('Package PKG_KPI_CLIENTES_ENTREGAS ejecutado por cambio en ENTREGA');
-    EXCEPTION
-        WHEN OTHERS THEN
-            DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_CLIENTES_ENTREGA: ' || SQLERRM);
-            ROLLBACK;
-    END TRG_KPI_CLIENTES_ENTREGA;
-/
+--Trigger para inventario
 
--- Trigger al modificar COMPRA (también afecta KPI_6 - Clientes recurrentes)
-CREATE OR REPLACE TRIGGER TRG_KPI_CLIENTES_COMPRA
-    AFTER INSERT OR UPDATE OR DELETE ON COMPRA
-    DECLARE
-        PRAGMA AUTONOMOUS_TRANSACTION;
-    BEGIN
-        DBMS_LOCK.SLEEP(2);
-        
-        PKG_KPI_CLIENTES_ENTREGAS.PROC_EJECUTAR_KPIS_CLIENTES;
-        
-        COMMIT;
-        DBMS_OUTPUT.PUT_LINE('Package PKG_KPI_CLIENTES_ENTREGAS ejecutado por cambio en COMPRA');
-    EXCEPTION
-        WHEN OTHERS THEN
-            DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_CLIENTES_COMPRA: ' || SQLERRM);
-            ROLLBACK;
-    END TRG_KPI_CLIENTES_COMPRA;
-/
+CREATE OR REPLACE TRIGGER TRG_KPI_INVENTARIO
 
+AFTER INSERT OR UPDATE OR DELETE ON PRODUCTO
+BEGIN
 
+PKG_KPI_INVENTARIO.RUN_ALL;
 
---Triggers para Package PKG_KPI_INVENTARIO
-
--- Trigger al modificar PRODUCTO (afecta KPI_4)
-CREATE OR REPLACE TRIGGER TRG_KPI_INVENTARIO_PRODUCTO
-    AFTER INSERT OR UPDATE OR DELETE ON PRODUCTO
-    DECLARE
-        PRAGMA AUTONOMOUS_TRANSACTION;
-    BEGIN
-        DBMS_LOCK.SLEEP(2);
-        
-        PKG_KPI_INVENTARIO.PROC_EJECUTAR_KPI_INVENTARIO;
-        
-        COMMIT;
-        DBMS_OUTPUT.PUT_LINE('Package PKG_KPI_INVENTARIO ejecutado por cambio en PRODUCTO');
-    EXCEPTION
-        WHEN OTHERS THEN
-            DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_INVENTARIO_PRODUCTO: ' || SQLERRM);
-            ROLLBACK;
-    END TRG_KPI_INVENTARIO_PRODUCTO;
-/
-
---Triggers para Todos los Packages
--- Trigger que ejecuta todos los packages cuando hay cambios significativos
-CREATE OR REPLACE TRIGGER TRG_KPI_MAESTRO_TODOS
-    AFTER INSERT OR UPDATE OR DELETE ON COMPRA
-    DECLARE
-        PRAGMA AUTONOMOUS_TRANSACTION;
-    BEGIN
-        DBMS_LOCK.SLEEP(3);
-        
-        -- Ejecutar todos los packages (actualización completa)
-        PKG_KPI_MASTER.PROC_EJECUTAR_TODOS_KPIS;
-        
-        COMMIT;
-        DBMS_OUTPUT.PUT_LINE('Todos los packages KPI ejecutados por cambio significativo en COMPRA');
-    EXCEPTION
-        WHEN OTHERS THEN
-            DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_MAESTRO_TODOS: ' || SQLERRM);
-            ROLLBACK;
-    END TRG_KPI_MAESTRO_TODOS;
-/
---Triggers para cambios masivos
-
--- Trigger optimizado para cambios masivos (solo se ejecuta una vez por transacción)
-CREATE OR REPLACE TRIGGER TRG_KPI_CAMBIO_MASIVO
-    AFTER INSERT OR UPDATE OR DELETE ON COMPRA
-    DECLARE
-        PRAGMA AUTONOMOUS_TRANSACTION;
-        v_count NUMBER;
-    BEGIN
-        -- Contar cuántos registros se afectaron
-        SELECT COUNT(*) INTO v_count FROM COMPRA 
-        WHERE FECHA_COM >= SYSDATE - 1/1440; -- Último minuto
-        
-        -- Solo ejecutar si hay más de 10 cambios (evitar ejecuciones por cambios pequeños)
-        IF v_count >= 10 THEN
-            DBMS_LOCK.SLEEP(5);
-            PKG_KPI_MASTER.PROC_EJECUTAR_TODOS_KPIS;
-            COMMIT;
-            DBMS_OUTPUT.PUT_LINE('Ejecución masiva de KPIs por ' || v_count || ' cambios en COMPRA');
-        END IF;
-    EXCEPTION
-        WHEN OTHERS THEN
-            ROLLBACK;
-    END TRG_KPI_CAMBIO_MASIVO;
-/
-
---gestor packages
--- Crear tabla de control para evitar ejecuciones excesivas
-CREATE TABLE CONTROL_EJECUCION_TRIGGERS (
-    TABLA_ORIGEN VARCHAR2(50),
-    ULTIMA_EJECUCION DATE,
-    CANTIDAD_EJECUCIONES NUMBER DEFAULT 0,
-    CONSTRAINT PK_CONTROL_TRIGGERS PRIMARY KEY (TABLA_ORIGEN)
-);
-
--- Trigger mejorado con control de frecuencia
-CREATE OR REPLACE TRIGGER TRG_KPI_CONTROLADO
-    AFTER INSERT OR UPDATE ON COMPRA
-    DECLARE
-        PRAGMA AUTONOMOUS_TRANSACTION;
-        v_ultima_ejecucion DATE;
-        v_minutos_desde_ultima NUMBER;
-    BEGIN
-        -- Verificar última ejecución
-        BEGIN
-            SELECT ULTIMA_EJECUCION INTO v_ultima_ejecucion
-            FROM CONTROL_EJECUCION_TRIGGERS
-            WHERE TABLA_ORIGEN = 'COMPRA';
-            
-            v_minutos_desde_ultima := (SYSDATE - v_ultima_ejecucion) * 24 * 60;
-        EXCEPTION
-            WHEN NO_DATA_FOUND THEN
-                v_minutos_desde_ultima := 999; -- Primera ejecución
-        END;
-        
-        -- Solo ejecutar si han pasado al menos 5 minutos desde la última ejecución
-        IF v_minutos_desde_ultima >= 5 THEN
-            PKG_KPI_VENTAS_COMPRAS.PROC_EJECUTAR_KPIS_VENTAS;
-            
-            -- Actualizar control
-            MERGE INTO CONTROL_EJECUCION_TRIGGERS c
-            USING (SELECT 'COMPRA' AS TABLA_ORIGEN, SYSDATE AS ULTIMA_EJECUCION FROM DUAL) src
-            ON (c.TABLA_ORIGEN = src.TABLA_ORIGEN)
-            WHEN MATCHED THEN
-                UPDATE SET c.ULTIMA_EJECUCION = src.ULTIMA_EJECUCION,
-                          c.CANTIDAD_EJECUCIONES = c.CANTIDAD_EJECUCIONES + 1
-            WHEN NOT MATCHED THEN
-                INSERT (TABLA_ORIGEN, ULTIMA_EJECUCION, CANTIDAD_EJECUCIONES)
-                VALUES (src.TABLA_ORIGEN, src.ULTIMA_EJECUCION, 1);
-            
-            COMMIT;
-            DBMS_OUTPUT.PUT_LINE('Package ejecutado controladamente por cambio en COMPRA');
-        END IF;
-    EXCEPTION
-        WHEN OTHERS THEN
-            ROLLBACK;
-    END TRG_KPI_CONTROLADO;
-/
+EXCEPTION
+WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Error en TRG_KPI_INVENTARIO_SIMPLE: ' || SQLERRM);
+END TRG_KPI_INVENTARIO_SIMPLE;
 /

@@ -1,0 +1,67 @@
+-- creación del package
+CREATE OR REPLACE PACKAGE PKG_KPI_MASTER IS
+
+E_NOT_INITIALIZED EXCEPTION;
+PRAGMA EXCEPTION_INIT(E_NOT_INITIALIZED, -20001);
+
+--inicialización.
+PROCEDURE INIT;
+PROCEDURE PROC_EJECUTAR_TODOS_KPIS;
+PROCEDURE PROC_EJECUTAR_KPIS_VENTAS;
+
+-- Verifica si hay datos en las tablas destino
+FUNCTION FN_VERIFICAR_TABLAS_KPI RETURN VARCHAR2;
+
+PROCEDURE PROC_OBTENER_ESTADISTICAS_KPI;
+
+END PKG_KPI_MASTER;
+/
+
+--cuerpo del package
+CREATE OR REPLACE PACKAGE BODY PKG_KPI_MASTER IS
+
+-- =========================================================
+-- Variables de Estado (Simulación de Constructor Privado)
+-- =========================================================
+G_IS_INITIALIZED BOOLEAN := FALSE;
+G_LAST_RUN_DATE DATE;
+
+PROCEDURE CHECK_INIT IS
+BEGIN
+IF NOT G_IS_INITIALIZED THEN
+    RAISE E_NOT_INITIALIZED;
+END IF;
+END CHECK_INIT;
+
+-- =========================================================
+-- Implementación de Funciones Públicas de Control
+-- =========================================================
+
+-- Constructor Público
+PROCEDURE INIT IS
+BEGIN
+G_LAST_RUN_DATE := SYSDATE;
+G_IS_INITIALIZED := TRUE;
+END INIT;
+
+PROCEDURE PROC_EJECUTAR_TODOS_KPIS IS
+BEGIN
+CHECK_INIT;
+PKG_KPI_VENTAS_COMPRAS.RUN_ALL;
+PKG_KPI_CLIENTES_ENTREGAS.RUN_ALL;
+PKG_KPI_INVENTARIO.RUN_ALL;
+END PROC_EJECUTAR_TODOS_KPIS;
+
+-- Ejecutar solo KPIs de ventas
+PROCEDURE PROC_EJECUTAR_KPIS_VENTAS IS
+BEGIN
+CHECK_INIT;
+PKG_KPI_VENTAS_COMPRAS.RUN_ALL;
+END PROC_EJECUTAR_KPIS_VENTAS;
+
+-- Inicialización
+BEGIN
+G_LAST_RUN_DATE := SYSDATE;
+G_IS_INITIALIZED := TRUE;
+END PKG_KPI_MASTER;
+/

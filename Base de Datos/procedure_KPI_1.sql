@@ -1,83 +1,77 @@
 CREATE OR REPLACE PROCEDURE PROC_REGISTROS_POR_ANIO IS
 
---Definicion de variables
-TYPE tipo_conteo_anios IS TABLE OF NUMBER INDEX BY VARCHAR2(20);
-V_ANIO_REG tipo_conteo_anios;
+--==================Definicion de variables==================--
 
-V_TOTAL_CLI NUMBER(16);
-V_FECHA_REG_CLI CLIENTE.FECHA_REG_CLI%TYPE;
-V_CATEGORIA_ANIO VARCHAR2(20);
-V_ANIO_NUM NUMBER;
+--variable para manejo de errores
+C_PROC_NAME CONSTANT VARCHAR2(30) := 'PROC_REGISTROS_POR_ANIO';
 
--- Cursor
-CURSOR C_CLIENTES IS
-    SELECT FECHA_REG_CLI
-    FROM CLIENTE;
-
--- Lista de categorias
-TYPE tipo_categorias IS TABLE OF VARCHAR2(20);
-V_CATEGORIAS tipo_categorias := tipo_categorias(
-    '2020 o antes',
-    '2021',
-    '2022',
-    '2023',
-    '2024',
-    'Este año'
+--Record para almacenar años y conteos
+TYPE KPI1_REC IS RECORD (
+    ANIO_REC KPI_1.ANIO%TYPE,
+    TOT_REGISTROS_REC KPI_1.TOTAL_REGISTROS%TYPE
 );
+-- Colección para resultados
+TYPE KPI1_ARRAY IS TABLE OF KPI1_REC;
+
+-- Colección de los resultados.
+ARRAY_RESULTADOS KPI1_ARRAY;
+
+--==================Inicio de los procesos==================--
 
 BEGIN
--- Inicializar contadores
-V_TOTAL_CLI := 0;
-V_ANIO_REG('2020 o antes') := 0;
-V_ANIO_REG('2021') := 0;
-V_ANIO_REG('2022') := 0;
-V_ANIO_REG('2023') := 0;
-V_ANIO_REG('2024') := 0;
-V_ANIO_REG('Este año') := 0;
+--vaciar tabla destino
+DELETE FROM KPI_1;
 
--- Ciclo que recorre la tabla Clientes
-FOR F_CLIENTE IN C_CLIENTES LOOP
-    V_FECHA_REG_CLI := F_CLIENTE.FECHA_REG_CLI;
-    V_ANIO_NUM := EXTRACT(YEAR FROM V_FECHA_REG_CLI);
+--clasificación y conteo
+SELECT
+    CASE
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) <= 2020 THEN '2020 o antes'
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) = 2021 THEN '2021'
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) = 2022 THEN '2022'
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) = 2023 THEN '2023'
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) = 2024 THEN '2024'
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) = EXTRACT(YEAR FROM SYSDATE) THEN 'Este año'
+        ELSE NULL
+    END AS ANIO_REC,
+    COUNT(c.RUN_CLI) AS TOT_REGISTROS_REC
 
--- Validar año permitido
-IF V_ANIO_NUM > 2025 THEN
-    RAISE_APPLICATION_ERROR(-20001, 'El año de registro ' || V_ANIO_NUM || ' excede el máximo permitido (2025).');
-    END IF;
+BULK COLLECT INTO ARRAY_RESULTADOS
 
--- Clasificar por categoría
-V_CATEGORIA_ANIO := CASE 
-    WHEN V_ANIO_NUM <= 2020 THEN '2020 o antes'
-    WHEN V_ANIO_NUM = 2021 THEN '2021'
-    WHEN V_ANIO_NUM = 2022 THEN '2022'
-    WHEN V_ANIO_NUM = 2023 THEN '2023'
-    WHEN V_ANIO_NUM = 2024 THEN '2024'
-    WHEN V_ANIO_NUM = EXTRACT(YEAR FROM SYSDATE) THEN 'Este año'
-    ELSE NULL
-    END;
+FROM
+    CLIENTE c
+    WHERE
+    --Se revisa que el año sea válido
+        c.FECHA_REG_CLI IS NOT NULL
+        AND EXTRACT(YEAR FROM c.FECHA_REG_CLI) <= 2025
 
--- Conteo
-IF V_CATEGORIA_ANIO IS NOT NULL THEN
-    V_ANIO_REG(V_CATEGORIA_ANIO) := V_ANIO_REG(V_CATEGORIA_ANIO) + 1;
-    V_TOTAL_CLI := V_TOTAL_CLI + 1;
-    END IF;
-END LOOP;
+GROUP BY
+    CASE
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) <= 2020 THEN '2020 o antes'
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) = 2021 THEN '2021'
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) = 2022 THEN '2022'
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) = 2023 THEN '2023'
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) = 2024 THEN '2024'
+        WHEN EXTRACT(YEAR FROM c.FECHA_REG_CLI) = EXTRACT(YEAR FROM SYSDATE) THEN 'Este año'
+        ELSE NULL
+    END
+HAVING
+    CASE ... END IS NOT NULL;
 
--- Merge para tabla resultados
-FOR I IN 1 .. V_CATEGORIAS.COUNT LOOP
-    MERGE INTO KPI_1 k
- 
-    USING (
-        SELECT V_CATEGORIAS(I) AS ANIO, V_ANIO_REG(V_CATEGORIAS(I)) AS TOTAL_REGISTROS FROM DUAL)
-    src ON (k.ANIO = src.ANIO)
-    WHEN MATCHED THEN
-      UPDATE SET k.TOTAL_REGISTROS = src.TOTAL_REGISTROS
-    WHEN NOT MATCHED THEN
-      INSERT (KPI_1_ID, ANIO, TOTAL_REGISTROS)
-      VALUES (KPI_1_SEQ.NEXTVAL, src.ANIO, src.TOTAL_REGISTROS);
-  END LOOP;
+-- Inserción de los datos recolectados
+IF ARRAY_RESULTADOS.COUNT > 0 THEN
+    FORALL i IN ARRAY_RESULTADOS.FIRST .. ARRAY_RESULTADOS.LAST
+        INSERT INTO KPI_1 (ANIO, TOTAL_REGISTROS)
+        VALUES (ARRAY_RESULTADOS(i).ANIO_REC, ARRAY_RESULTADOS(i).TOT_REGISTROS_REC);
+END IF;
 
+--==================Manejo de excepciones==================--
 EXCEPTION
-  WHEN OTHERS THEN RAISE;
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('--- ERROR EN EL PROCEDIMIENTO KPI 1 ---');
+        DBMS_OUTPUT.PUT_LINE('Procedimiento: ' || C_PROC_NAME);
+        DBMS_OUTPUT.PUT_LINE('Código SQL: ' || SQLCODE);
+        DBMS_OUTPUT.PUT_LINE('Mensaje SQL: ' || SQLERRM);
+        RAISE;
+
 END PROC_REGISTROS_POR_ANIO;
 /
