@@ -1,111 +1,155 @@
 --Datos PRODUCTOS
 
-ID_PRO|NOM_PRO|DESC_PRO|PRE_PRO|FRANQUICIA_PRO|OFER_PRO|FOTO_PRO
-1|(Figura Bishojo) Hatsune Miku - Hatsune Miku 15° Aniversario|figura a escala del 15th aniversario de Hatsune Miku Fresa|318000|figures|1|./assets/png/1.png
-2|(Figura Bishojo) Hatsune Miku MAGICAL MIRAI 2025 ver.|Hatsune Miku – Magical Mirai 2025 Ver. – Figura a escala|218200|figures|0|./assets/png/2.png
-3|(Figura Bishojo) Shenhe Genshin Impact|Shenhe – Lonesome Transcendence Ver. (Genshin Impact) – Figura a escala|260990|figures|1|./assets/png/3.png
-4|(Figura Bishojo) Vocal series 01: Hatsune Miku: World Is Mine 2024 Ver.|Hatsune Miku – World Is Mine 2024 Ver. (Vocal Series 01 Bishojo)|204200|figures|0|./assets/png/4.png
-5|(Figura Bishojo)Frieren: Beyond Journey's End Fern: Reflections of a Distant Memory.|Frieren: Beyond Journey's End mage Fern – Figura a escala|80990|figures|1|./assets/png/5.png
-6|(Figma) Joker|Figura Figma de Joker de Persona 5 con detalles icónicos del personaje|88900|figures|0|./assets/png/6.png
-7|(Figma) Styles Black Corset Dress|Elegante vestido corset negro para personalizar tus figuras Figma|32000|figures|1|./assets/png/7.png
-8|(Figma) OMGKawaiiAngel|Figura Figma de OMGkawaiiAngel de Needy Girl Overdose|49990|figures|0|./assets/png/8.png
-9|(Figma) Himmel|Figura Figma del legendario héroe de Sousou no Frieren|119990|figures|1|./assets/png/9.png
-10|(Figma) A2|Figura Figma de la androide rebelde de NieR Automata|82900|figures|0|./assets/png/10.png
-11|(Nendoroid)Kanata Shinkai|Figura Nendoroid del idol Kanata Shinkai de Ensemble Stars|36990|figures|1|./assets/png/11.png
-12|(Nendoroid) Twilight Sparkle|Figura Nendoroid de Twilight Sparkle de My Little Pony|41600|figures|0|./assets/png/12.png
-13|(Nendoroid) Kenma Kozume: Second Uniform Ver|Nendoroid de Kenma con su uniforme alterno de Haikyuu|37990|figures|0|./assets/png/13.png
-14|(Nendoroid) Nana Osaki|Figura Nendoroid de la icónica rockera de NANA|41990|figures|1|./assets/png/14.png
-15|(Nendoroid) Maquillaje facial personalizable!: Rena 02 (Peach/Cinnamon/Cream/Almond Milk)|Rostros artísticos intercambiables para Nendoroid Doll|8990|figures|0|./assets/png/15.png
-16|(Manga Sets) Skip and Loafer Vol. 1–12|set de manga colección Completa 12 Libros Español|68990|mangas|1|./assets/png/16.png
-17|Go For It Nakamura! (Ganbare! Nakamura-kun!!) Vol.1-2|Caja con 24 sobres de la expansión Maze of Memories|12990|mangas|0|./assets/png/17.png
-18|Cardcaptor Sakura: Clear Card Vol. 1–16|Cardcaptor Sakura: Clear Card - Colección completa en formato tankoubon con sobrecubierta|17990|mangas|1|./assets/png/18.png
-19|Let's! Haikyu!? Vol. 1–11|Set de 11 libros del manga alternativo de Haikyuu|7990|mangas|0|./assets/png/19.png
-20|The Guy She Was Interested in Wasn't a Guy at All Vol. 1–3|Set 3 libros - Trilogía manga romántica GirlsLove|17590|mangas|1|./assets/png/20.png
-21|Blue Lock vol. 01|Blue Lock - Manga en formato tankoubon con sobrecubierta y páginas a color exclusivas|12490|mangas|0|./assets/png/21.png
-22|Naruto vol. 66|Naruto Vol. 66 - La batalla en la dimensión del Kamui|16990|mangas|1|./assets/png/22.png
-23|¡Huyamos juntas! vol. 01|Huyamos juntas Vol. 1 - Romance y reencuentro entre dos mujeres marcado por recuerdos de juventud y un amor imposible de olvidar|10990|mangas|0|./assets/png/23.png
-24|El callejón|El Callejón - Antología de 11 relatos cortos de Junji Ito que mezclan terror y misterio|20990|mangas|0|./assets/png/24.png
-25|One punch man vol. 24|One Punch Man Vol. 24 - Saitama se enfrenta al rey Orochi|16990|mangas|1|./assets/png/25.png
-26|(KeyChain)Obey Me! - Set de Llaveros Acrílicos Belphegor|Set de 2 llaveros acrílicos de Belphegor de Obey Me edición especial de la Shibuya109 Pop Up Store|8200|goods|0|./assets/png/26.png
-27|(pines)Obey Me! Nightbringer - Caja con 7 Chapas Coleccionables (Arte Oficial)|Caja 1BOX=7 de chapas metálicas de la serie Obey Me Nightbringer con ilustraciones oficiales exclusivas|28500|goods|1|./assets/png/27.png
-28|(pines)Hatsune Miku - In your memory.|Set de chapas metálicas de Hatsune Miku in your memory|6500|goods|0|./assets/png/28.png
-29|(pines)Funda Decorativa para Pines 57mm - Hydrangea|Cubierta protectora y decorativa para pines de 57mm con diseño de hortensias|1700|goods|1|./assets/png/29.png
-30|(pines) Funda Protectora para Pines 100mm – Universal|Cubierta transparente compatible con pines de 100mm|1700|goods|0|./assets/png/30.png
-31|(doll) Naruto Shippuden – Doll Kakashi Hatake|Mini figura colgante de Kakashi Hatake con cadena eslabonada|49990|goods|1|./assets/png/31.png
-32|(keychain) The Fragrant Flower Blooms with Dignity – Llavero Acrílico Kaoruko Waguri|Llavero acrílico con diseño de Kaoruko Waguri y detalle de alambre|8990|goods|0|./assets/png/32.png
-33|(keychain) Haikyuu!! – Caja 8 llaveros de Goma|Set de 8 figuras de goma estilo Nitotan con los personajes de Haikyuu|32390|goods|1|./assets/png/33.png
-34|(calendario)Sumikko Gurashi – Calendario de Escritorio|Calendario de mesa con adorables ilustraciones de Sumikko Gurashi|6990|goods|0|/assets/png/34.png
-35|(stand) Haikyuu!! The Way Home – Acrílico Stand Shoyo Hinata|Figura acrílica de Shoyo Hinata en la colección The Way Home|7990|goods|1|./assets/png/35.png
-36|BanG Dream! Ave Mujica – CD Regular Edition (+ Bromide)|Edición regular del nuevo lanzamiento de Ave Mujica para BanG Dream incluye un bromide de regalo|12990|cds|0|./assets/png/36.png
-37|BanG Dream! Ave Mujica – Limited Deluxe Edition (+ Bromide Pin y Llavero)|Edición limitada de producción deluxe del nuevo título de Ave Mujica para BanG Dream con bromide pin y llavero exclusivos|126990|cds|0|./assets/png/37.png
-38|Hina Tachibana – HOLIC [Limited First Edition]|Edición limitada de primera producción de HOLIC el nuevo lanzamiento musical de Hina Tachibana|39990|cds|1|./assets/png/38.png
-39|My Hero Academia Season 7 ED2 – Rokutousei by Zarame [Limited Edition CD+DVD]|Edición limitada de producción del segundo ending de la temporada 7 de My Hero Academia Rokutousei interpretado por Zarame incluye CD + DVD|11990|cds|0|./assets/png/39.png
-40|THE IDOLM@STER SideM – Fantastic Combination ~ PINATATIME!! ~ High x Joker|CD musical oficial de THE IDOLM@STER SideM parte de la serie Fantastic Combination con High x Joker|10990|cds|1|./assets/png/40.png
-41|PLAVE – Kakurenbo [Edición Solo BAMBY]|Edición especial con portada individual de BAMBY para el sencillo Kakurenbo de PLAVE|16990|cds|0|./assets/png/41.png
-42|Paradox Live – Battle of Unity Round 3 FUTURE|Tercera entrega de la serie Battle of Unity de Paradox Live con nuevas canciones y duelos musicales|11990|cds|0|./assets/png/42.png
-43|Hatsune Miku Colorful Stage! – Yoka ni Mitorete / D/N/A (Nightcord at 25:00)|CD oficial del juego Hatsune Miku Colorful Stage|11990|cds|1|./assets/png/43.png
-44|Astro Dive – First Message -LMLMM x x x -|Primer lanzamiento de Astro Dive un álbum con la energía única de la agrupación|24390|cds|0|./assets/png/44.png
-45|BanG Dream! Roselia – Ishizue no Hanakanmuri [Edición Regular]|Edición regular del lanzamiento musical de Roselia para BanG Dream titulado Ishizue no Hanakanmuri|12990|cds|1|./assets/png/45.png
-46|(doll)Blue Lock – Peluche Pien Rin Itoshi|Peluche oficial de Pien Rin Itoshi de Blue Lock ideal para coleccionistas y fans del manga anime|41990|goods|0|./assets/png/46.png
-47|(doll) BanG Dream! – Peluche Kaoru Seta (Hello Happy World)|Peluche oficial de Kaoru Seta de la banda Hello Happy World de BanG Dream|32000|goods|1|./assets/png/47.png
-48|(figura bishoujo) Hatsune Miku EXPO 10th Anniversary|Figura a escala 1/7 de Hatsune Miku conmemorativa del 10º aniversario del EXPO|184490|figures|0|./assets/png/48.png
-49|(nendoroid)PICCODO Action Doll X Honkai: Star Rail – Chibi Doll Jiaoqiu|Figura chibi articulada de Jiaoqiu de Honkai Star Rail en formato PICCODO Action|41380|figures|1|./assets/png/49.png
-50|Naruto vol. 01|Naruto Vol. 1 - El inicio de la aventura de Naruto Uzumaki|9590|mangas|0|./assets/png/50.png
-51|Manga Boy Meets Maria|Boy Meets Maria es un manga de género shōnen-ai ilustrado y escrito por Peyo|15990|mangas|0|./assets/png/51.png
-52|Nana tomo 01|Primer tomo del manga NANA que sigue la vida de dos jóvenes mujeres con el mismo nombre pero personalidades y sueños muy diferentes|9590|mangas|0|./assets/png/52.png
+ID_PRO|NOM_PRO|DESC_PRO|PRE_PRO|FRANQUICIA_PRO|OFER_PRO|FOTO_PRO|STOCK
+1|(Figura Bishojo) Hatsune Miku - Hatsune Miku 15° Aniversario|figura a escala del 15th aniversario de Hatsune Miku Fresa|318000|figures|1|./assets/png/1.png|8
+2|(Figura Bishojo) Hatsune Miku MAGICAL MIRAI 2025 ver.|Hatsune Miku – Magical Mirai 2025 Ver. – Figura a escala|218200|figures|0|./assets/png/2.png|15
+3|(Figura Bishojo) Shenhe Genshin Impact|Shenhe – Lonesome Transcendence Ver. (Genshin Impact) – Figura a escala|260990|figures|1|./assets/png/3.png|12
+4|(Figura Bishojo) Vocal series 01: Hatsune Miku: World Is Mine 2024 Ver.|Hatsune Miku – World Is Mine 2024 Ver. (Vocal Series 01 Bishojo)|204200|figures|0|./assets/png/4.png|22
+5|(Figura Bishojo)Frieren: Beyond Journey's End Fern: Reflections of a Distant Memory.|Frieren: Beyond Journey's End mage Fern – Figura a escala|80990|figures|1|./assets/png/5.png|18
+6|(Figma) Joker|Figura Figma de Joker de Persona 5 con detalles icónicos del personaje|88900|figures|0|./assets/png/6.png|25
+7|(Figma) Styles Black Corset Dress|Elegante vestido corset negro para personalizar tus figuras Figma|32000|figures|1|./assets/png/7.png|30
+8|(Figma) OMGKawaiiAngel|Figura Figma de OMGkawaiiAngel de Needy Girl Overdose|49990|figures|0|./assets/png/8.png|14
+9|(Figma) Himmel|Figura Figma del legendario héroe de Sousou no Frieren|119990|figures|1|./assets/png/9.png|9
+10|(Figma) A2|Figura Figma de la androide rebelde de NieR Automata|82900|figures|0|./assets/png/10.png|20
+11|(Nendoroid)Kanata Shinkai|Figura Nendoroid del idol Kanata Shinkai de Ensemble Stars|36990|figures|1|./assets/png/11.png|16
+12|(Nendoroid) Twilight Sparkle|Figura Nendoroid de Twilight Sparkle de My Little Pony|41600|figures|0|./assets/png/12.png|28
+13|(Nendoroid) Kenma Kozume: Second Uniform Ver|Nendoroid de Kenma con su uniforme alterno de Haikyuu|37990|figures|0|./assets/png/13.png|19
+14|(Nendoroid) Nana Osaki|Figura Nendoroid de la icónica rockera de NANA|41990|figures|1|./assets/png/14.png|11
+15|(Nendoroid) Maquillaje facial personalizable!: Rena 02 (Peach/Cinnamon/Cream/Almond Milk)|Rostros artísticos intercambiables para Nendoroid Doll|8990|figures|0|./assets/png/15.png|35
+16|(Manga Sets) Skip and Loafer Vol. 1–12|set de manga colección Completa 12 Libros Español|68990|mangas|1|./assets/png/16.png|7
+17|Go For It Nakamura! (Ganbare! Nakamura-kun!!) Vol.1-2|Caja con 24 sobres de la expansión Maze of Memories|12990|mangas|0|./assets/png/17.png|40
+18|Cardcaptor Sakura: Clear Card Vol. 1–16|Cardcaptor Sakura: Clear Card - Colección completa en formato tankoubon con sobrecubierta|17990|mangas|1|./assets/png/18.png|13
+19|Let's! Haikyu!? Vol. 1–11|Set de 11 libros del manga alternativo de Haikyuu|7990|mangas|0|./assets/png/19.png|32
+20|The Guy She Was Interested in Wasn't a Guy at All Vol. 1–3|Set 3 libros - Trilogía manga romántica GirlsLove|17590|mangas|1|./assets/png/20.png|21
+21|Blue Lock vol. 01|Blue Lock - Manga en formato tankoubon con sobrecubierta y páginas a color exclusivas|12490|mangas|0|./assets/png/21.png|45
+22|Naruto vol. 66|Naruto Vol. 66 - La batalla en la dimensión del Kamui|16990|mangas|1|./assets/png/22.png|26
+23|¡Huyamos juntas! vol. 01|Huyamos juntas Vol. 1 - Romance y reencuentro entre dos mujeres marcado por recuerdos de juventud y un amor imposible de olvidar|10990|mangas|0|./assets/png/23.png|38
+24|El callejón|El Callejón - Antología de 11 relatos cortos de Junji Ito que mezclan terror y misterio|20990|mangas|0|./assets/png/24.png|29
+25|One punch man vol. 24|One Punch Man Vol. 24 - Saitama se enfrenta al rey Orochi|16990|mangas|1|./assets/png/25.png|24
+26|(KeyChain)Obey Me! - Set de Llaveros Acrílicos Belphegor|Set de 2 llaveros acrílicos de Belphegor de Obey Me edición especial de la Shibuya109 Pop Up Store|8200|goods|0|./assets/png/26.png|50
+27|(pines)Obey Me! Nightbringer - Caja con 7 Chapas Coleccionables (Arte Oficial)|Caja 1BOX=7 de chapas metálicas de la serie Obey Me Nightbringer con ilustraciones oficiales exclusivas|28500|goods|1|./assets/png/27.png|17
+28|(pines)Hatsune Miku - In your memory.|Set de chapas metálicas de Hatsune Miku in your memory|6500|goods|0|./assets/png/28.png|42
+29|(pines)Funda Decorativa para Pines 57mm - Hydrangea|Cubierta protectora y decorativa para pines de 57mm con diseño de hortensias|1700|goods|1|./assets/png/29.png|55
+30|(pines) Funda Protectora para Pines 100mm – Universal|Cubierta transparente compatible con pines de 100mm|1700|goods|0|./assets/png/30.png|60
+31|(doll) Naruto Shippuden – Doll Kakashi Hatake|Mini figura colgante de Kakashi Hatake con cadena eslabonada|49990|goods|1|./assets/png/31.png|10
+32|(keychain) The Fragrant Flower Blooms with Dignity – Llavero Acrílico Kaoruko Waguri|Llavero acrílico con diseño de Kaoruko Waguri y detalle de alambre|8990|goods|0|./assets/png/32.png|33
+33|(keychain) Haikyuu!! – Caja 8 llaveros de Goma|Set de 8 figuras de goma estilo Nitotan con los personajes de Haikyuu|32390|goods|1|./assets/png/33.png|8
+34|(calendario)Sumikko Gurashi – Calendario de Escritorio|Calendario de mesa con adorables ilustraciones de Sumikko Gurashi|6990|goods|0|/assets/png/34.png|47
+35|(stand) Haikyuu!! The Way Home – Acrílico Stand Shoyo Hinata|Figura acrílica de Shoyo Hinata en la colección The Way Home|7990|goods|1|./assets/png/35.png|19
+36|BanG Dream! Ave Mujica – CD Regular Edition (+ Bromide)|Edición regular del nuevo lanzamiento de Ave Mujica para BanG Dream incluye un bromide de regalo|12990|cds|0|./assets/png/36.png|28
+37|BanG Dream! Ave Mujica – Limited Deluxe Edition (+ Bromide Pin y Llavero)|Edición limitada de producción deluxe del nuevo título de Ave Mujica para BanG Dream con bromide pin y llavero exclusivos|126990|cds|0|./assets/png/37.png|3
+38|Hina Tachibana – HOLIC [Limited First Edition]|Edición limitada de primera producción de HOLIC el nuevo lanzamiento musical de Hina Tachibana|39990|cds|1|./assets/png/38.png|15
+39|My Hero Academia Season 7 ED2 – Rokutousei by Zarame [Limited Edition CD+DVD]|Edición limitada de producción del segundo ending de la temporada 7 de My Hero Academia Rokutousei interpretado por Zarame incluye CD + DVD|11990|cds|0|./assets/png/39.png|22
+40|THE IDOLM@STER SideM – Fantastic Combination ~ PINATATIME!! ~ High x Joker|CD musical oficial de THE IDOLM@STER SideM parte de la serie Fantastic Combination con High x Joker|10990|cds|1|./assets/png/40.png|31
+41|PLAVE – Kakurenbo [Edición Solo BAMBY]|Edición especial con portada individual de BAMBY para el sencillo Kakurenbo de PLAVE|16990|cds|0|./assets/png/41.png|26
+42|Paradox Live – Battle of Unity Round 3 FUTURE|Tercera entrega de la serie Battle of Unity de Paradox Live con nuevas canciones y duelos musicales|11990|cds|0|./assets/png/42.png|18
+43|Hatsune Miku Colorful Stage! – Yoka ni Mitorete / D/N/A (Nightcord at 25:00)|CD oficial del juego Hatsune Miku Colorful Stage|11990|cds|1|./assets/png/43.png|24
+44|Astro Dive – First Message -LMLMM x x x -|Primer lanzamiento de Astro Dive un álbum con la energía única de la agrupación|24390|cds|0|./assets/png/44.png|12
+45|BanG Dream! Roselia – Ishizue no Hanakanmuri [Edición Regular]|Edición regular del lanzamiento musical de Roselia para BanG Dream titulado Ishizue no Hanakanmuri|12990|cds|1|./assets/png/45.png|20
+46|(doll)Blue Lock – Peluche Pien Rin Itoshi|Peluche oficial de Pien Rin Itoshi de Blue Lock ideal para coleccionistas y fans del manga anime|41990|goods|0|./assets/png/46.png|14
+47|(doll) BanG Dream! – Peluche Kaoru Seta (Hello Happy World)|Peluche oficial de Kaoru Seta de la banda Hello Happy World de BanG Dream|32000|goods|1|./assets/png/47.png|11
+48|(figura bishoujo) Hatsune Miku EXPO 10th Anniversary|Figura a escala 1/7 de Hatsune Miku conmemorativa del 10º aniversario del EXPO|184490|figures|0|./assets/png/48.png|6
+49|(nendoroid)PICCODO Action Doll X Honkai: Star Rail – Chibi Doll Jiaoqiu|Figura chibi articulada de Jiaoqiu de Honkai Star Rail en formato PICCODO Action|41380|figures|1|./assets/png/49.png|16
+50|Naruto vol. 01|Naruto Vol. 1 - El inicio de la aventura de Naruto Uzumaki|9590|mangas|0|./assets/png/50.png|52
+51|Manga Boy Meets Maria|Boy Meets Maria es un manga de género shōnen-ai ilustrado y escrito por Peyo|15990|mangas|0|./assets/png/51.png|27
+52|Nana tomo 01|Primer tomo del manga NANA que sigue la vida de dos jóvenes mujeres con el mismo nombre pero personalidades y sueños muy diferentes|9590|mangas|0|./assets/png/52.png|30
+
+--datos clientes
+
+RUN_CLI|DV_RUN_CLI|NOMBRE_CLI|FECHA_NAC_CLI|DIREC_CLI|FECHA_REG_CLI
+15678901|5|Martina González|1990-03-12|Av. Libertador 123, Santiago|2024-11-06
+16789012|k|Sebastián Rodríguez|1995-07-25|Calle Los Alerces 456, Providencia|2024-11-15
+17890123|4|Catalina Silva|1993-11-03|Los Plátanos 789, Las Condes|2024-11-25
+18901234|3|Fernando López|1998-02-18|Av. Manuel Montt 321, Ñuñoa|2024-12-04
+19012345|2|Valentina Martínez|1995-09-14|Los Olmos 654, La Reina|2024-12-13
+20123456|1|Diego Hernández|1992-12-30|Av. Grecia 987, Santiago|2024-12-23
+21234567|0|Camila Pérez|1996-04-07|Los Cerezos 147, Macul|2025-01-01
+22345678|9|Javier Díaz|1994-06-22|Av. Irarrázaval 258, Ñuñoa|2025-01-10
+23456789|8|Antonia Rojas|2001-01-15|Los Laureles 369, Peñalolén|2025-01-19
+24567890|7|Matías Soto|1996-08-09|Av. Tobalaba 741, Providencia|2025-01-29
+25678901|6|Francisca Castro|1999-05-28|Los Guindos 852, Las Condes|2025-02-07
+26789012|5|Nicolás Vargas|1991-10-11|Av. Pedro de Valdivia 963, Providencia|2025-02-16
+27890123|4|Isabel Morales|2002-03-04|Los Naranjos 159, La Florida|2025-02-26
+28901234|3|Cristóbal Fuentes|1997-12-17|Av. Vicuña Mackenna 753, Macul|2025-03-07
+29012345|2|Daniela Navarro|1993-07-20|Los Manzanos 486, Ñuñoa|2025-03-16
+30123456|1|Alejandro Mendoza|2000-09-23|Av. Las Condes 627, Las Condes|2025-03-26
+31234567|0|Gabriela Torres|1995-02-16|Los Cipreses 384, Vitacura|2025-04-04
+32345678|9|Tomás Ríos|1992-11-29|Av. Apoquindo 291, Las Condes|2025-04-13
+33456789|8|María José Flores|1998-06-12|Los Jardines 718, La Reina|2025-04-23
+34567890|7|Felipe Espinoza|1994-01-25|Av. Larraín 835, La Reina|2025-05-02
+35678901|6|Constanza Ortega|2001-04-08|Los Prados 942, Peñalolén|2025-05-11
+36789012|5|Rodrigo Paredes|1996-10-31|Av. Quilín 576, Peñalolén|2025-05-21
+37890123|4|Anaís Salazar|1991-05-14|Los Bosques 693, La Florida|2025-05-30
+38901234|3|Patricio Núñez|1999-08-27|Av. La Florida 824, La Florida|2025-06-08
+39012345|2|Paula Jiménez|1993-03-10|Los Nogales 137, Santiago|2025-06-18
+40123456|1|Ignacio Reyes|2002-12-03|Av. Santa Rosa 264, Santiago|2025-06-27
+41234567|0|Elena Mendoza|1997-07-16|Los Almendros 475, Providencia|2025-07-06
+42345678|9|Roberto Silva|1994-04-29|Av. Providencia 586, Providencia|2025-07-16
+43456789|8|Lucía Herrera|2000-01-12|Los Robles 697, Las Condes|2025-07-25
+44567890|7|Mauricio Vega|1995-06-25|Av. El Golf 718, Las Condes|2025-08-03
+45678901|6|Adriana Pizarro|1992-09-18|Los Tilos 829, Vitacura|2025-08-13
+46789012|5|Esteban Contreras|1998-02-01|Av. Vitacura 931, Vitacura|2025-08-22
+47890123|4|Soledad Miranda|2001-05-24|Los Cerezos 142, Ñuñoa|2025-08-31
+48901234|3|Hugo Ramos|1996-10-07|Av. José Pedro Alessandri 253, Ñuñoa|2025-09-10
+49012345|2|Natalia Molina|1991-03-20|Los Claveles 364, Macul|2025-09-19
+50123456|1|Ricardo Sepúlveda|1999-08-13|Av. Macul 475, Macul|2025-09-28
+51234567|0|Verónica Campos|1994-11-26|Los Jazmines 586, La Reina|2025-10-08
+52345678|9|Gustavo León|2002-04-09|Av. Tobalaba 697, La Reina|2025-10-17
+53456789|8|Ximena Parra|1997-09-22|Los Abetos 718, Peñalolén|2025-10-26
+54567890|7|Óscar Guzmán|1993-12-15|Av. Consistorial 829, Peñalolén|2025-11-06
 
 --Datos CARRITOS
 ID_CA|FEC_CRE_CA|CLIENTE_RUN_CLI
-1|2024-01-15|15678901
-2|2024-01-18|16789012
-3|2024-01-22|17890123
-4|2024-01-25|18901234
-5|2024-01-28|19012345
-6|2024-02-01|20123456
-7|2024-02-05|21234567
-8|2024-02-08|22345678
-9|2024-02-12|23456789
-10|2024-02-15|24567890
-11|2024-02-18|25678901
-12|2024-02-22|26789012
-13|2024-02-25|27890123
-14|2024-02-28|28901234
-15|2024-03-02|29012345
-16|2024-03-05|30123456
-17|2024-03-08|31234567
-18|2024-03-12|32345678
-19|2024-03-15|33456789
-20|2024-03-18|34567890
-21|2024-03-22|35678901
-22|2024-03-25|36789012
-23|2024-03-28|37890123
-24|2024-04-01|38901234
-25|2024-04-05|39012345
-26|2024-04-08|40123456
-27|2024-04-12|41234567
-28|2024-04-15|42345678
-29|2024-04-18|43456789
-30|2024-04-22|44567890
-31|2024-04-25|45678901
-32|2024-04-28|46789012
-33|2024-05-02|47890123
-34|2024-05-05|48901234
-35|2024-05-08|49012345
-36|2024-05-12|50123456
-37|2024-05-15|51234567
-38|2024-05-18|52345678
-39|2024-05-22|53456789
-40|2024-05-25|54567890
-41|2024-05-28|15678901
-42|2024-06-01|16789012
-43|2024-06-05|17890123
-44|2024-06-08|18901234
-45|2024-06-12|19012345
-46|2024-06-15|20123456
-47|2024-06-18|21234567
-48|2024-06-22|22345678
-49|2024-06-25|23456789
-50|2024-06-28|24567890
+1|2024-11-08|15678901
+2|2024-11-17|16789012
+3|2024-11-27|17890123
+4|2024-12-06|18901234
+5|2024-12-15|19012345
+6|2024-12-25|20123456
+7|2025-01-03|21234567
+8|2025-01-12|22345678
+9|2025-01-21|23456789
+10|2025-01-31|24567890
+11|2025-02-09|25678901
+12|2025-02-18|26789012
+13|2025-02-28|27890123
+14|2025-03-09|28901234
+15|2025-03-18|29012345
+16|2025-03-28|30123456
+17|2025-04-06|31234567
+18|2025-04-15|32345678
+19|2025-04-25|33456789
+20|2025-05-04|34567890
+21|2025-05-13|35678901
+22|2025-05-23|36789012
+23|2025-06-01|37890123
+24|2025-06-10|38901234
+25|2025-06-20|39012345
+26|2025-06-29|40123456
+27|2025-07-08|41234567
+28|2025-07-18|42345678
+29|2025-07-27|43456789
+30|2025-08-05|44567890
+31|2025-08-15|45678901
+32|2025-08-24|46789012
+33|2025-09-02|47890123
+34|2025-09-12|48901234
+35|2025-09-21|49012345
+36|2025-09-30|50123456
+37|2025-10-10|51234567
+38|2025-10-19|52345678
+39|2025-10-28|53456789
+40|2025-11-06|54567890
+41|2025-01-10|15678901
+42|2025-01-20|16789012
+43|2025-02-01|17890123
+44|2025-02-10|18901234
+45|2025-02-20|19012345
+46|2025-03-05|20123456
+47|2025-03-15|21234567
+48|2025-03-25|22345678
+49|2025-04-05|23456789
+50|2025-04-15|24567890
 
 --Tabla DetalleCarrito
 
@@ -214,70 +258,68 @@ ID_DETA_CA|CARRITO_ID_CA|PRODUCTO_ID_PRO|CANT_PRO
 --Tabla Compras
 
 COD_COM|DESC_COM|TOTAL_SIN_IVA|VALOR_IVA|TOTAL_CON_IVA|FECHA_COM|CLIENTE_RUN_CLI|CARRITO_ID_CA
-1|Compra de figuras de anime y mangas|150000|28500|178500|2024-01-20|15678901|1
-2|Compra de merchandise y goods|89000|16910|105910|2024-01-25|16789012|2
-3|Compra de figuras coleccionables|210000|39900|249900|2024-01-28|17890123|3
-4|Compra de CDs musicales y mangas|125000|23750|148750|2024-02-02|18901234|4
-5|Compra de figuras Bishojo|95000|18050|113050|2024-02-05|19012345|5
-6|Compra de Nendoroids y Figmas|180000|34200|214200|2024-02-10|20123456|6
-7|Compra de mangas completos|76000|14440|90440|2024-02-15|21234567|7
-8|Compra de figuras y peluches|135000|25650|160650|2024-02-18|22345678|8
-9|Compra de CDs edición limitada|198000|37620|235620|2024-02-22|23456789|9
-10|Compra de goods varios|112000|21280|133280|2024-02-25|24567890|10
-11|Compra de figuras escala 1/7|165000|31350|196350|2024-03-01|25678901|11
-12|Compra de mangas y artbooks|88000|16720|104720|2024-03-05|26789012|12
-13|Compra de figuras anime|143000|27170|170170|2024-03-08|27890123|13
-14|Compra de CDs y blu-rays|175000|33250|208250|2024-03-12|28901234|14
-15|Compra de merchandise exclusivo|99000|18810|117810|2024-03-15|29012345|15
-16|Compra de figuras colección|205000|38950|243950|2024-03-20|30123456|16
-17|Compra de mangas nuevos|118000|22420|140420|2024-03-25|31234567|17
-18|Compra de figuras edición especial|155000|29450|184450|2024-03-28|32345678|18
-19|Compra de goods anime|127000|24130|151130|2024-04-02|33456789|19
-20|Compra de CDs importados|142000|26980|168980|2024-04-05|34567890|20
-21|Compra de figuras y mangas|168000|31920|199920|2024-04-10|35678901|21
-22|Compra de merchandise variado|92000|17480|109480|2024-04-15|36789012|22
-23|Compra de figuras premium|192000|36480|228480|2024-04-18|37890123|23
-24|Compra de mangas completos|135000|25650|160650|2024-04-22|38901234|24
-25|Compra de CDs y goods|148000|28120|176120|2024-04-25|39012345|25
-26|Compra de figuras edición limitada|176000|33440|209440|2024-04-30|40123456|26
-27|Compra de mangas y novels|102000|19380|121380|2024-05-05|41234567|27
-28|Compra de figuras importadas|188000|35720|223720|2024-05-08|42345678|28
-29|Compra de CDs exclusivos|115000|21850|136850|2024-05-12|43456789|29
-30|Compra de merchandise oficial|162000|30780|192780|2024-05-15|44567890|30
+1|Compra de figuras de anime y mangas|150000|28500|178500|2024-11-11|15678901|1
+2|Compra de merchandise y goods|89000|16910|105910|2024-11-20|16789012|2
+3|Compra de figuras coleccionables|210000|39900|249900|2024-11-30|17890123|3
+4|Compra de CDs musicales y mangas|125000|23750|148750|2024-12-09|18901234|4
+5|Compra de figuras Bishojo|95000|18050|113050|2024-12-18|19012345|5
+6|Compra de Nendoroids y Figmas|180000|34200|214200|2024-12-28|20123456|6
+7|Compra de mangas completos|76000|14440|90440|2025-01-06|21234567|7
+8|Compra de figuras y peluches|135000|25650|160650|2025-01-15|22345678|8
+9|Compra de CDs edición limitada|198000|37620|235620|2025-01-24|23456789|9
+10|Compra de goods varios|112000|21280|133280|2025-02-03|24567890|10
+11|Compra de figuras escala 1/7|165000|31350|196350|2025-02-12|25678901|11
+12|Compra de mangas y artbooks|88000|16720|104720|2025-02-21|26789012|12
+13|Compra de figuras anime|143000|27170|170170|2025-03-03|27890123|13
+14|Compra de CDs y blu-rays|175000|33250|208250|2025-03-12|28901234|14
+15|Compra de merchandise exclusivo|99000|18810|117810|2025-03-21|29012345|15
+16|Compra de figuras colección|205000|38950|243950|2025-03-31|30123456|16
+17|Compra de mangas nuevos|118000|22420|140420|2025-04-09|31234567|17
+18|Compra de figuras edición especial|155000|29450|184450|2025-04-18|32345678|18
+19|Compra de goods anime|127000|24130|151130|2025-04-28|33456789|19
+20|Compra de CDs importados|142000|26980|168980|2025-05-07|34567890|20
+21|Compra de figuras y mangas|168000|31920|199920|2025-05-16|35678901|21
+22|Compra de merchandise variado|92000|17480|109480|2025-05-26|36789012|22
+23|Compra de figuras premium|192000|36480|228480|2025-06-04|37890123|23
+24|Compra de mangas completos|135000|25650|160650|2025-06-13|38901234|24
+25|Compra de CDs y goods|148000|28120|176120|2025-06-23|39012345|25
+26|Compra de figuras edición limitada|176000|33440|209440|2025-07-02|40123456|26
+27|Compra de mangas y novels|102000|19380|121380|2025-07-11|41234567|27
+28|Compra de figuras importadas|188000|35720|223720|2025-07-21|42345678|28
+29|Compra de CDs exclusivos|115000|21850|136850|2025-07-30|43456789|29
+30|Compra de merchandise oficial|162000|30780|192780|2025-08-08|44567890|30
 
---Tabla Entregas
-ID_ENTREGA|ESTADO_ENT|FECHA_ENT_APROX|FECHA_FIN_ENT|REPARTIDOR_RUN|COMPRA_COD_COM
-1|Entregado|2024-01-22|2024-01-21|12345678|1
-2|En camino|2024-01-28|2024-01-27|23456789|2
-3|Entregado|2024-02-01|2024-01-31|34567890|3
-4|Entrega Fallida|2024-02-05|2024-02-06|45678901|4
-5|Entregado|2024-02-08|2024-02-07|56789012|5
-6|En camino|2024-02-13|2024-02-12|67890123|6
-7|Por Enviar|2024-02-18|2024-02-19|78901234|7
-8|Entregado|2024-02-21|2024-02-20|89012345|8
-9|En camino|2024-02-25|2024-02-24|90123456|9
-10|Entregado|2024-02-28|2024-02-27|11222333|10
-11|Entrega Fallida|2024-03-04|2024-03-05|22333444|11
-12|Entregado|2024-03-08|2024-03-07|33444555|12
-13|En camino|2024-03-11|2024-03-10|44555666|13
-14|Entregado|2024-03-15|2024-03-14|55666777|14
-15|Por Enviar|2024-03-18|2024-03-19|66777888|15
-16|Entregado|2024-03-23|2024-03-22|12345678|16
-17|En camino|2024-03-28|2024-03-27|23456789|17
-18|Entregado|2024-03-31|2024-03-30|34567890|18
-19|Entrega Fallida|2024-04-05|2024-04-06|45678901|19
-20|Entregado|2024-04-08|2024-04-07|56789012|20
-21|En camino|2024-04-13|2024-04-12|67890123|21
-22|Entregado|2024-04-18|2024-04-17|78901234|22
-23|Por Enviar|2024-04-21|2024-04-22|89012345|23
-24|Entregado|2024-04-25|2024-04-24|90123456|24
-25|En camino|2024-04-28|2024-04-27|11222333|25
-26|Entregado|2024-05-03|2024-05-02|22333444|26
-27|Entrega Fallida|2024-05-08|2024-05-09|33444555|27
-28|Entregado|2024-05-11|2024-05-10|44555666|28
-29|En camino|2024-05-15|2024-05-14|55666777|29
-30|Entregado|2024-05-18|2024-05-17|66777888|30
-
+--Tabla EntregasID_ENTREGA|ESTADO_ENT|FECHA_ENT_APROX|FECHA_FIN_ENT|REPARTIDOR_RUN|COMPRA_COD_COM
+1|Entregado|2024-11-14|2024-11-13|12345678|1
+2|En camino|2024-11-23|2024-11-22|23456789|2
+3|Entregado|2024-12-03|2024-12-02|34567890|3
+4|Entrega Fallida|2024-12-12|2024-12-13|45678901|4
+5|Entregado|2024-12-21|2024-12-20|56789012|5
+6|En camino|2024-12-31|2024-12-30|67890123|6
+7|Por Enviar|2025-01-09|2025-01-10|78901234|7
+8|Entregado|2025-01-18|2025-01-17|89012345|8
+9|En camino|2025-01-27|2025-01-26|90123456|9
+10|Entregado|2025-02-06|2025-02-05|11222333|10
+11|Entrega Fallida|2025-02-15|2025-02-16|22333444|11
+12|Entregado|2025-02-24|2025-02-23|33444555|12
+13|En camino|2025-03-06|2025-03-05|44555666|13
+14|Entregado|2025-03-15|2025-03-14|55666777|14
+15|Por Enviar|2025-03-24|2025-03-25|66777888|15
+16|Entregado|2025-04-03|2025-04-02|12345678|16
+17|En camino|2025-04-12|2025-04-11|23456789|17
+18|Entregado|2025-04-21|2025-04-20|34567890|18
+19|Entrega Fallida|2025-05-01|2025-05-02|45678901|19
+20|Entregado|2025-05-10|2025-05-09|56789012|20
+21|En camino|2025-05-19|2025-05-18|67890123|21
+22|Entregado|2025-05-29|2025-05-28|78901234|22
+23|Por Enviar|2025-06-07|2025-06-08|89012345|23
+24|Entregado|2025-06-16|2025-06-15|90123456|24
+25|En camino|2025-06-26|2025-06-25|11222333|25
+26|Entregado|2025-07-05|2025-07-04|22333444|26
+27|Entrega Fallida|2025-07-14|2025-07-15|33444555|27
+28|Entregado|2025-07-24|2025-07-23|44555666|28
+29|En camino|2025-08-02|2025-08-01|55666777|29
+30|Entregado|2025-08-11|2025-08-10|66777888|30
 --Tabla Repartidores
 RUN_REPARTIDOR|DV_RUN_REPAR|NOMBRE_REPAR|FECHA_CONTRATO_REPAR|FONO_REPAR
 12345678|9|Juan Pérez González|2023-01-15|912345678
